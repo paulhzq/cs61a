@@ -1,0 +1,3019 @@
+{
+  "checksum": "2d307e90a09e175d330b96a64b784de5",
+  "db": {
+    "dictAssessId2Info": {
+      ">>> 0 or True\nLOCKED_ANSWER\n>>> not '' or not 0 and False\nLOCKED_ANSWER\n>>> 13 and False\nLOCKED_ANSWER\n": {
+        "assessNum": "0",
+        "dictWA2DictInfo": {
+          "['0']": {
+            "dictTag2ConceptMsg": {
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['1']": {
+            "dictTag2ConceptMsg": {
+              "boolisbinary-booleanrepresentation": "13"
+            },
+            "dictTag2KIMsg": {
+              "boolisbinary": "24"
+            },
+            "lstMisU": [
+              "boolisbinary",
+              "boolisbinary-booleanrepresentation"
+            ]
+          },
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['false']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['true']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> 0 or True\nTrue\n>>> not '' or not 0 and False\nLOCKED_ANSWER\n>>> 13 and False\nLOCKED_ANSWER\n": {
+        "assessNum": "1",
+        "dictWA2DictInfo": {
+          "[\"' '\"]": {
+            "dictTag2ConceptMsg": {
+              "falseyistruthy-booleanfalseyvalues": "7",
+              "notdoesnothing-not": "6"
+            },
+            "dictTag2KIMsg": {
+              "falseyistruthy": "27",
+              "notdoesnothing": "26"
+            },
+            "lstMisU": [
+              "falseyistruthy",
+              "falseyistruthy-booleanfalseyvalues",
+              "notdoesnothing",
+              "notdoesnothing-not"
+            ]
+          },
+          "[\"''\"]": {
+            "dictTag2ConceptMsg": {
+              "falseyistruthy-booleanfalseyvalues": "7",
+              "notdoesnothing-not": "6"
+            },
+            "dictTag2KIMsg": {},
+            "lstMisU": [
+              "falseyistruthy-booleanfalseyvalues",
+              "notdoesnothing-not"
+            ]
+          },
+          "[\"not ' '\"]": {
+            "dictTag2ConceptMsg": {
+              "noevalbool-evalbool": "15"
+            },
+            "dictTag2KIMsg": {
+              "noevalbool": "28"
+            },
+            "lstMisU": [
+              "noevalbool",
+              "noevalbool-evalbool"
+            ]
+          },
+          "['0']": {
+            "dictTag2ConceptMsg": {
+              "falseyistruthy-booleanfalseyvalues": "7",
+              "notdoesnothing-not": "6",
+              "wrnboolopprecedence-boolorderofoperations": "14"
+            },
+            "dictTag2KIMsg": {
+              "falseyistruthy": "27",
+              "notdoesnothing": "26",
+              "wrnboolopprecedence": "25"
+            },
+            "lstMisU": [
+              "falseyistruthy",
+              "falseyistruthy-booleanfalseyvalues",
+              "notdoesnothing",
+              "notdoesnothing-not",
+              "wrnboolopprecedence",
+              "wrnboolopprecedence-boolorderofoperations"
+            ]
+          },
+          "['1']": {
+            "dictTag2ConceptMsg": {
+              "boolisbinary-booleanrepresentation": "13"
+            },
+            "dictTag2KIMsg": {
+              "boolisbinary": "24"
+            },
+            "lstMisU": [
+              "boolisbinary",
+              "boolisbinary-booleanrepresentation"
+            ]
+          },
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "notdoesnothing-not": "6",
+              "wrnboolopprecedence-boolorderofoperations": "14"
+            },
+            "dictTag2KIMsg": {
+              "notdoesnothing": "26",
+              "wrnboolopprecedence": "25"
+            },
+            "lstMisU": [
+              "notdoesnothing",
+              "notdoesnothing-not",
+              "wrnboolopprecedence",
+              "wrnboolopprecedence-boolorderofoperations"
+            ]
+          },
+          "['false']": {
+            "dictTag2ConceptMsg": {
+              "notdoesnothing-not": "6",
+              "wrnboolopprecedence-boolorderofoperations": "14"
+            },
+            "dictTag2KIMsg": {
+              "notdoesnothing": "26",
+              "wrnboolopprecedence": "25"
+            },
+            "lstMisU": [
+              "notdoesnothing",
+              "notdoesnothing-not",
+              "wrnboolopprecedence",
+              "wrnboolopprecedence-boolorderofoperations"
+            ]
+          },
+          "['not 0 and False']": {
+            "dictTag2ConceptMsg": {
+              "noevalbool-evalbool": "15"
+            },
+            "dictTag2KIMsg": {
+              "noevalbool": "28"
+            },
+            "lstMisU": [
+              "noevalbool",
+              "noevalbool-evalbool"
+            ]
+          },
+          "['true']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> 0 or True\nTrue\n>>> not '' or not 0 and False\nTrue\n>>> 13 and False\nLOCKED_ANSWER\n": {
+        "assessNum": "2",
+        "dictWA2DictInfo": {
+          "['13']": {
+            "dictTag2ConceptMsg": {
+              "nonzeroisfalsey-booleanfalseyvalues": "7",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "nonzeroisfalsey": "29",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "nonzeroisfalsey",
+              "nonzeroisfalsey-booleanfalseyvalues",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['false']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          },
+          "['true']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nLOCKED_ANSWER\n>>> True and 0\nLOCKED_ANSWER\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n": {
+        "assessNum": "8",
+        "dictWA2DictInfo": {
+          "['Error']": {
+            "dictTag2ConceptMsg": {
+              "ordsntshrtcir-or": "11",
+              "ordsntshrtcir-shortcircuit": "1",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "ordsntshrtcir": "34",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "ordsntshrtcir",
+              "ordsntshrtcir-or",
+              "ordsntshrtcir-shortcircuit",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "ordsntshrtcir-or": "11",
+              "ordsntshrtcir-shortcircuit": "1",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1",
+              "zerodivdsnterr-zerodiverror": "19"
+            },
+            "dictTag2KIMsg": {
+              "ordsntshrtcir": "34",
+              "swapandor": "21",
+              "zerodivdsnterr": "32"
+            },
+            "lstMisU": [
+              "ordsntshrtcir",
+              "ordsntshrtcir-or",
+              "ordsntshrtcir-shortcircuit",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit",
+              "zerodivdsnterr",
+              "zerodivdsnterr-zerodiverror"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\n0\n>>> False or 1\n1\n>>> 1 and 3 and 6 and 10 and 15\n15\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n": {
+        "assessNum": "12",
+        "dictWA2DictInfo": {
+          "['0']": {
+            "dictTag2ConceptMsg": {
+              "orshrtcirfalsey-or": "11",
+              "orshrtcirfalsey-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "orshrtcirfalsey": "31"
+            },
+            "lstMisU": [
+              "orshrtcirfalsey",
+              "orshrtcirfalsey-or",
+              "orshrtcirfalsey-shortcircuit"
+            ]
+          },
+          "['1/0']": {
+            "dictTag2ConceptMsg": {
+              "noevalexpr-evalexpr": "10",
+              "ordsntshrtcir-or": "11",
+              "ordsntshrtcir-shortcircuit": "1",
+              "zerodivdsnterr-zerodiverror": "19"
+            },
+            "dictTag2KIMsg": {
+              "noevalexpr": "28",
+              "ordsntshrtcir": "34",
+              "zerodivdsnterr": "32"
+            },
+            "lstMisU": [
+              "noevalexpr",
+              "noevalexpr-evalexpr",
+              "ordsntshrtcir",
+              "ordsntshrtcir-or",
+              "ordsntshrtcir-shortcircuit",
+              "zerodivdsnterr",
+              "zerodivdsnterr-zerodiverror"
+            ]
+          },
+          "['Error']": {
+            "dictTag2ConceptMsg": {
+              "ordsntshrtcir-or": "11",
+              "ordsntshrtcir-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "ordsntshrtcir": "34"
+            },
+            "lstMisU": [
+              "ordsntshrtcir",
+              "ordsntshrtcir-or",
+              "ordsntshrtcir-shortcircuit"
+            ]
+          },
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "orshrtcirfalsey-or": "11",
+              "orshrtcirfalsey-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "orshrtcirfalsey": "31"
+            },
+            "lstMisU": [
+              "orshrtcirfalsey",
+              "orshrtcirfalsey-or",
+              "orshrtcirfalsey-shortcircuit"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\n0\n>>> False or 1\n1\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n": {
+        "assessNum": "11",
+        "dictWA2DictInfo": {
+          "['1']": {
+            "dictTag2ConceptMsg": {
+              "andshrtcirtruthy-and": "2",
+              "andshrtcirtruthy-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "andshrtcirtruthy": "30"
+            },
+            "lstMisU": [
+              "andshrtcirtruthy",
+              "andshrtcirtruthy-and",
+              "andshrtcirtruthy-shortcircuit"
+            ]
+          },
+          "['3']": {
+            "dictTag2ConceptMsg": {
+              "boolisbinary-booleanrepresentation": "13",
+              "nonzeroisfalsey-booleanfalseyvalues": "7"
+            },
+            "dictTag2KIMsg": {
+              "boolisbinary": "24",
+              "nonzeroisfalsey": "29"
+            },
+            "lstMisU": [
+              "boolisbinary",
+              "boolisbinary-booleanrepresentation",
+              "nonzeroisfalsey",
+              "nonzeroisfalsey-booleanfalseyvalues"
+            ]
+          },
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "nonzeroisfalsey-booleanfalseyvalues": "7"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "nonzeroisfalsey": "29"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "nonzeroisfalsey",
+              "nonzeroisfalsey-booleanfalseyvalues"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['0']": [
+            [
+              "11",
+              "['False']"
+            ]
+          ],
+          "['False']": [
+            [
+              "11",
+              "['0']"
+            ]
+          ]
+        }
+      },
+      ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\n0\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n": {
+        "assessNum": "10",
+        "dictWA2DictInfo": {
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "nonzeroisfalsey-booleanfalseyvalues": "7",
+              "orshrtcirfalsey-or": "11",
+              "orshrtcirfalsey-shortcircuit": "1",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "nonzeroisfalsey": "29",
+              "orshrtcirfalsey": "31",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "nonzeroisfalsey",
+              "nonzeroisfalsey-booleanfalseyvalues",
+              "orshrtcirfalsey",
+              "orshrtcirfalsey-or",
+              "orshrtcirfalsey-shortcircuit",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\nLOCKED_ANSWER\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n": {
+        "assessNum": "9",
+        "dictWA2DictInfo": {
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "andshrtcirtruthy-and": "2",
+              "andshrtcirtruthy-shortcircuit": "1",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "andshrtcirtruthy": "30",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "andshrtcirtruthy",
+              "andshrtcirtruthy-and",
+              "andshrtcirtruthy-shortcircuit",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> True and 1 / 0 and False\nLOCKED_ANSWER\n>>> True or 1 / 0 or False\nLOCKED_ANSWER\n>>> True and 0\nLOCKED_ANSWER\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n": {
+        "assessNum": "7",
+        "dictWA2DictInfo": {
+          "['1 / 0']": {
+            "dictTag2ConceptMsg": {
+              "noevalexpr-evalexpr": "10",
+              "zerodivdsnterr-zerodiverror": "19"
+            },
+            "dictTag2KIMsg": {
+              "noevalexpr": "28",
+              "zerodivdsnterr": "32"
+            },
+            "lstMisU": [
+              "noevalexpr",
+              "noevalexpr-evalexpr",
+              "zerodivdsnterr",
+              "zerodivdsnterr-zerodiverror"
+            ]
+          },
+          "['1/0']": {
+            "dictTag2ConceptMsg": {
+              "noevalexpr-evalexpr": "10",
+              "zerodivdsnterr-zerodiverror": "19"
+            },
+            "dictTag2KIMsg": {
+              "noevalexpr": "28",
+              "zerodivdsnterr": "32"
+            },
+            "lstMisU": [
+              "noevalexpr",
+              "noevalexpr-evalexpr",
+              "zerodivdsnterr",
+              "zerodivdsnterr-zerodiverror"
+            ]
+          },
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "wrnboolopprecedence-boolorderofoperations": "14",
+              "zerodivdsnterr-zerodiverror": "19"
+            },
+            "dictTag2KIMsg": {
+              "wrnboolopprecedence": "25",
+              "zerodivdsnterr": "32"
+            },
+            "lstMisU": [
+              "wrnboolopprecedence",
+              "wrnboolopprecedence-boolorderofoperations",
+              "zerodivdsnterr",
+              "zerodivdsnterr-zerodiverror"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "andshrtcirtruthy-and": "2",
+              "andshrtcirtruthy-shortcircuit": "1",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "andshrtcirtruthy": "30",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "andshrtcirtruthy",
+              "andshrtcirtruthy-and",
+              "andshrtcirtruthy-shortcircuit",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['ZeroDivisionError']": {
+            "dictTag2ConceptMsg": {
+              "sloppynoreadinstructions-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppynoreadinstructions": "33"
+            },
+            "lstMisU": [
+              "sloppynoreadinstructions",
+              "sloppynoreadinstructions-sloppy"
+            ]
+          },
+          "['error']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['1 / 0 and False']": [
+            [
+              "7",
+              "['1 / 0']"
+            ]
+          ],
+          "['1 / 0']": [
+            [
+              "7",
+              "['1 / 0 and False']"
+            ]
+          ],
+          "['ZeroDivisionError']": [
+            [
+              "7",
+              "['ZeroDivisionError: division by zero']"
+            ]
+          ],
+          "['ZeroDivisionError: division by zero']": [
+            [
+              "7",
+              "['ZeroDivisionError']"
+            ]
+          ]
+        }
+      },
+      ">>> True and 13\n13\n>>> False or 0\n0\n>>> not 10\nFalse\n>>> not None\nLOCKED_ANSWER\n": {
+        "assessNum": "6",
+        "dictWA2DictInfo": {
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "falseyistruthy-booleanfalseyvalues": "7"
+            },
+            "dictTag2KIMsg": {
+              "falseyistruthy": "27"
+            },
+            "lstMisU": [
+              "falseyistruthy",
+              "falseyistruthy-booleanfalseyvalues"
+            ]
+          },
+          "['None']": {
+            "dictTag2ConceptMsg": {
+              "notdoesnothing-not": "6"
+            },
+            "dictTag2KIMsg": {
+              "notdoesnothing": "26"
+            },
+            "lstMisU": [
+              "notdoesnothing",
+              "notdoesnothing-not"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> True and 13\n13\n>>> False or 0\n0\n>>> not 10\nLOCKED_ANSWER\n>>> not None\nLOCKED_ANSWER\n": {
+        "assessNum": "5",
+        "dictWA2DictInfo": {
+          "['0']": {
+            "dictTag2ConceptMsg": {
+              "boolisbinary-booleanrepresentation": "13"
+            },
+            "dictTag2KIMsg": {
+              "boolisbinary": "24"
+            },
+            "lstMisU": [
+              "boolisbinary",
+              "boolisbinary-booleanrepresentation"
+            ]
+          },
+          "['10']": {
+            "dictTag2ConceptMsg": {
+              "notdoesnothing-not": "6"
+            },
+            "dictTag2KIMsg": {
+              "notdoesnothing": "26"
+            },
+            "lstMisU": [
+              "notdoesnothing",
+              "notdoesnothing-not"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "nonzeroisfalsey-booleanfalseyvalues": "7"
+            },
+            "dictTag2KIMsg": {
+              "nonzeroisfalsey": "29"
+            },
+            "lstMisU": [
+              "nonzeroisfalsey",
+              "nonzeroisfalsey-booleanfalseyvalues"
+            ]
+          },
+          "['false']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['false']": [
+            [
+              "5",
+              "['true']"
+            ]
+          ],
+          "['true']": [
+            [
+              "5",
+              "['false']"
+            ]
+          ]
+        }
+      },
+      ">>> True and 13\n13\n>>> False or 0\nLOCKED_ANSWER\n>>> not 10\nLOCKED_ANSWER\n>>> not None\nLOCKED_ANSWER\n": {
+        "assessNum": "4",
+        "dictWA2DictInfo": {
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "orshrtcirfalsey-or": "11",
+              "orshrtcirfalsey-shortcircuit": "1",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "orshrtcirfalsey": "31",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "orshrtcirfalsey",
+              "orshrtcirfalsey-or",
+              "orshrtcirfalsey-shortcircuit",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "falseyistruthy-booleanfalseyvalues": "7"
+            },
+            "dictTag2KIMsg": {
+              "boolexprrtnbool": "23",
+              "falseyistruthy": "27"
+            },
+            "lstMisU": [
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "falseyistruthy",
+              "falseyistruthy-booleanfalseyvalues"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> True and 13\nLOCKED_ANSWER\n>>> False or 0\nLOCKED_ANSWER\n>>> not 10\nLOCKED_ANSWER\n>>> not None\nLOCKED_ANSWER\n": {
+        "assessNum": "3",
+        "dictWA2DictInfo": {
+          "['False']": {
+            "dictTag2ConceptMsg": {
+              "nonzeroisfalsey-booleanfalseyvalues": "7"
+            },
+            "dictTag2KIMsg": {
+              "nonzeroisfalsey": "29"
+            },
+            "lstMisU": [
+              "nonzeroisfalsey",
+              "nonzeroisfalsey-booleanfalseyvalues"
+            ]
+          },
+          "['True']": {
+            "dictTag2ConceptMsg": {
+              "andshrtcirtruthy-and": "2",
+              "andshrtcirtruthy-shortcircuit": "1",
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "andshrtcirtruthy": "30",
+              "boolexprrtnbool": "23",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "andshrtcirtruthy",
+              "andshrtcirtruthy-and",
+              "andshrtcirtruthy-shortcircuit",
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          },
+          "['true']": {
+            "dictTag2ConceptMsg": {
+              "andshrtcirtruthy-and": "2",
+              "andshrtcirtruthy-shortcircuit": "1",
+              "boolexprrtnbool-and": "2",
+              "boolexprrtnbool-or": "11",
+              "swapandor-and": "2",
+              "swapandor-or": "11",
+              "swapandor-shortcircuit": "1"
+            },
+            "dictTag2KIMsg": {
+              "andshrtcirtruthy": "30",
+              "boolexprrtnbool": "23",
+              "swapandor": "21"
+            },
+            "lstMisU": [
+              "andshrtcirtruthy",
+              "andshrtcirtruthy-and",
+              "andshrtcirtruthy-shortcircuit",
+              "boolexprrtnbool",
+              "boolexprrtnbool-and",
+              "boolexprrtnbool-or",
+              "swapandor",
+              "swapandor-and",
+              "swapandor-or",
+              "swapandor-shortcircuit"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['false']": [
+            [
+              "3",
+              "['true']"
+            ]
+          ],
+          "['true']": [
+            [
+              "3",
+              "['false']"
+            ]
+          ]
+        }
+      },
+      ">>> def go(n):\n...     if n % 2 != 0:\n...         print(n / 2)\n...         return\n...     while n > 0:\n...         print(n)\n...         n = n // 2\n>>> go(4)\n4\n2\n1\n>>> go(5)\nLOCKED_ANSWER\n": {
+        "assessNum": "26",
+        "dictWA2DictInfo": {
+          "['2']": {
+            "dictTag2ConceptMsg": {
+              "swapfloordivtruediv-divisiontype": "4"
+            },
+            "dictTag2KIMsg": {
+              "swapfloordivtruediv": "48"
+            },
+            "lstMisU": [
+              "swapfloordivtruediv",
+              "swapfloordivtruediv-divisiontype"
+            ]
+          },
+          "['3']": {
+            "dictTag2ConceptMsg": {
+              "sloppyarith-sloppy": "0",
+              "swapfloordivtruediv-divisiontype": "4"
+            },
+            "dictTag2KIMsg": {
+              "sloppyarith": "47",
+              "swapfloordivtruediv": "48"
+            },
+            "lstMisU": [
+              "sloppyarith",
+              "sloppyarith-sloppy",
+              "swapfloordivtruediv",
+              "swapfloordivtruediv-divisiontype"
+            ]
+          },
+          "['5']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['Infinite Loop']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['0']": [
+            [
+              "26",
+              "['6']"
+            ],
+            [
+              "26",
+              "['7']"
+            ],
+            [
+              "26",
+              "['8']"
+            ],
+            [
+              "26",
+              "['9']"
+            ]
+          ],
+          "['1']": [
+            [
+              "26",
+              "['6']"
+            ],
+            [
+              "26",
+              "['7']"
+            ],
+            [
+              "26",
+              "['8']"
+            ],
+            [
+              "26",
+              "['9']"
+            ]
+          ],
+          "['3']": [
+            [
+              "26",
+              "['6']"
+            ],
+            [
+              "26",
+              "['7']"
+            ],
+            [
+              "26",
+              "['8']"
+            ],
+            [
+              "26",
+              "['9']"
+            ]
+          ],
+          "['4']": [
+            [
+              "26",
+              "['6']"
+            ],
+            [
+              "26",
+              "['7']"
+            ],
+            [
+              "26",
+              "['8']"
+            ],
+            [
+              "26",
+              "['9']"
+            ]
+          ],
+          "['6']": [
+            [
+              "26",
+              "['0']"
+            ],
+            [
+              "26",
+              "['1']"
+            ],
+            [
+              "26",
+              "['3']"
+            ],
+            [
+              "26",
+              "['4']"
+            ]
+          ],
+          "['7']": [
+            [
+              "26",
+              "['0']"
+            ],
+            [
+              "26",
+              "['1']"
+            ],
+            [
+              "26",
+              "['3']"
+            ],
+            [
+              "26",
+              "['4']"
+            ]
+          ],
+          "['8']": [
+            [
+              "26",
+              "['0']"
+            ],
+            [
+              "26",
+              "['1']"
+            ],
+            [
+              "26",
+              "['3']"
+            ],
+            [
+              "26",
+              "['4']"
+            ]
+          ],
+          "['9']": [
+            [
+              "26",
+              "['0']"
+            ],
+            [
+              "26",
+              "['1']"
+            ],
+            [
+              "26",
+              "['3']"
+            ],
+            [
+              "26",
+              "['4']"
+            ]
+          ]
+        }
+      },
+      ">>> def go(n):\n...     if n % 2 != 0:\n...         print(n / 2)\n...         return\n...     while n > 0:\n...         print(n)\n...         n = n // 2\n>>> go(4)\nLOCKED_ANSWER\nLOCKED_ANSWER\nLOCKED_ANSWER\n>>> go(5)\nLOCKED_ANSWER\n": {
+        "assessNum": "25",
+        "dictWA2DictInfo": {
+          "['2']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['2.0']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['4', '1']": {
+            "dictTag2ConceptMsg": {
+              "floordivisdivtwice-divisiontype": "4"
+            },
+            "dictTag2KIMsg": {
+              "floordivisdivtwice": "48"
+            },
+            "lstMisU": [
+              "floordivisdivtwice",
+              "floordivisdivtwice-divisiontype"
+            ]
+          },
+          "['4', '2', '.5']": {
+            "dictTag2ConceptMsg": {
+              "nfloordivnisweird-divisiontype": "4",
+              "sloppyarith-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "nfloordivnisweird": "48",
+              "sloppyarith": "47"
+            },
+            "lstMisU": [
+              "nfloordivnisweird",
+              "nfloordivnisweird-divisiontype",
+              "sloppyarith",
+              "sloppyarith-sloppy"
+            ]
+          },
+          "['4', '2', '0']": {
+            "dictTag2ConceptMsg": {
+              "nfloordivnisweird-divisiontype": "4",
+              "sloppyarith-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "nfloordivnisweird": "48",
+              "sloppyarith": "47"
+            },
+            "lstMisU": [
+              "nfloordivnisweird",
+              "nfloordivnisweird-divisiontype",
+              "sloppyarith",
+              "sloppyarith-sloppy"
+            ]
+          },
+          "['4', '2', '0.5']": {
+            "dictTag2ConceptMsg": {
+              "nfloordivnisweird-divisiontype": "4",
+              "sloppyarith-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "nfloordivnisweird": "48",
+              "sloppyarith": "47"
+            },
+            "lstMisU": [
+              "nfloordivnisweird",
+              "nfloordivnisweird-divisiontype",
+              "sloppyarith",
+              "sloppyarith-sloppy"
+            ]
+          },
+          "['4', '2', '1 / 2']": {
+            "dictTag2ConceptMsg": {
+              "nfloordivnisweird-divisiontype": "4",
+              "noevalexpr-evalexpr": "10",
+              "sloppyarith-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "nfloordivnisweird": "48",
+              "noevalexpr": "28",
+              "sloppyarith": "47"
+            },
+            "lstMisU": [
+              "nfloordivnisweird",
+              "nfloordivnisweird-divisiontype",
+              "noevalexpr",
+              "noevalexpr-evalexpr",
+              "sloppyarith",
+              "sloppyarith-sloppy"
+            ]
+          },
+          "['4', '2', '1/2']": {
+            "dictTag2ConceptMsg": {
+              "nfloordivnisweird-divisiontype": "4",
+              "noevalexpr-evalexpr": "10",
+              "sloppyarith-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "nfloordivnisweird": "48",
+              "noevalexpr": "28",
+              "sloppyarith": "47"
+            },
+            "lstMisU": [
+              "nfloordivnisweird",
+              "nfloordivnisweird-divisiontype",
+              "noevalexpr",
+              "noevalexpr-evalexpr",
+              "sloppyarith",
+              "sloppyarith-sloppy"
+            ]
+          },
+          "['4', '2', '2']": {
+            "dictTag2ConceptMsg": {
+              "nfloordivnisweird-divisiontype": "4",
+              "sloppyarith-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "nfloordivnisweird": "48",
+              "sloppyarith": "47"
+            },
+            "lstMisU": [
+              "nfloordivnisweird",
+              "nfloordivnisweird-divisiontype",
+              "sloppyarith",
+              "sloppyarith-sloppy"
+            ]
+          },
+          "['4', '2', 'Infinite Loop']": {
+            "dictTag2ConceptMsg": {
+              "swapfloordivtruediv-divisiontype": "4"
+            },
+            "dictTag2KIMsg": {
+              "swapfloordivtruediv": "48"
+            },
+            "lstMisU": [
+              "swapfloordivtruediv",
+              "swapfloordivtruediv-divisiontype"
+            ]
+          },
+          "['Infinite Loop']": {
+            "dictTag2ConceptMsg": {
+              "sloppyloopcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyloopcondition": "43"
+            },
+            "lstMisU": [
+              "sloppyloopcondition",
+              "sloppyloopcondition-sloppy"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['0']": [
+            [
+              "25",
+              "['return']"
+            ]
+          ],
+          "['None']": [
+            [
+              "25",
+              "['none']"
+            ]
+          ],
+          "['n / 2']": [
+            [
+              "25",
+              "['n/2']"
+            ]
+          ],
+          "['n/2']": [
+            [
+              "25",
+              "['n / 2']"
+            ]
+          ],
+          "['none']": [
+            [
+              "25",
+              "['None']"
+            ]
+          ],
+          "['return']": [
+            [
+              "25",
+              "['0']"
+            ]
+          ]
+        }
+      },
+      ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\n'big'\n>>> how_big(12)\nLOCKED_ANSWER\n>>> how_big(1)\nLOCKED_ANSWER\n>>> how_big(-1)\nLOCKED_ANSWER\n": {
+        "assessNum": "17",
+        "dictWA2DictInfo": {
+          "[\"'big'\"]": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "[\"'huge' 'big'\"]": {
+            "dictTag2ConceptMsg": {
+              "ifelseisifif-ifclause": "12",
+              "ifelseisifif-sloppy": "0",
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "ifelseisifif": "38",
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "ifelseisifif",
+              "ifelseisifif-ifclause",
+              "ifelseisifif-sloppy",
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "[\"'huge'\"]": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "[\"'huge''big'\"]": {
+            "dictTag2ConceptMsg": {
+              "ifelseisifif-ifclause": "12",
+              "ifelseisifif-sloppy": "0",
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "ifelseisifif": "38",
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "ifelseisifif",
+              "ifelseisifif-ifclause",
+              "ifelseisifif-sloppy",
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "[\"'small'\"]": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9",
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37",
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring",
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "[\"('huge')\"]": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "[\"huge 'big'\"]": {
+            "dictTag2ConceptMsg": {
+              "ifelseisifif-ifclause": "12",
+              "ifelseisifif-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "ifelseisifif": "38"
+            },
+            "lstMisU": [
+              "ifelseisifif",
+              "ifelseisifif-ifclause",
+              "ifelseisifif-sloppy"
+            ]
+          },
+          "['\"huge\"']": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "[\"'big'\"]": [
+            [
+              "17",
+              "[\"'nothin'\"]"
+            ],
+            [
+              "17",
+              "['\"nothin\\'\"']"
+            ]
+          ],
+          "[\"'huge''big'\"]": [
+            [
+              "17",
+              "[\"huge'big'\"]"
+            ]
+          ],
+          "[\"'nothin'\"]": [
+            [
+              "17",
+              "[\"'big'\"]"
+            ],
+            [
+              "17",
+              "[\"'small'\"]"
+            ]
+          ],
+          "[\"'small'\"]": [
+            [
+              "17",
+              "[\"'nothin'\"]"
+            ],
+            [
+              "17",
+              "['\"nothin\"']"
+            ],
+            [
+              "17",
+              "['\"nothin\\'\"']"
+            ]
+          ],
+          "[\"huge'big'\"]": [
+            [
+              "17",
+              "[\"'huge''big'\"]"
+            ]
+          ],
+          "['\"nothin\"']": [
+            [
+              "17",
+              "[\"'small'\"]"
+            ]
+          ],
+          "['\"nothin\\'\"']": [
+            [
+              "17",
+              "[\"'big'\"]"
+            ],
+            [
+              "17",
+              "[\"'small'\"]"
+            ]
+          ],
+          "['None']": [
+            [
+              "17",
+              "['none']"
+            ]
+          ],
+          "['none']": [
+            [
+              "17",
+              "['None']"
+            ]
+          ]
+        }
+      },
+      ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\n'big'\n>>> how_big(12)\nhuge\n>>> how_big(1)\nLOCKED_ANSWER\n>>> how_big(-1)\nLOCKED_ANSWER\n": {
+        "assessNum": "18",
+        "dictWA2DictInfo": {
+          "[\"'small'\"]": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\n'big'\n>>> how_big(12)\nhuge\n>>> how_big(1)\nsmall\n>>> how_big(-1)\nLOCKED_ANSWER\n": {
+        "assessNum": "19",
+        "dictWA2DictInfo": {
+          "[\"'nothin'\"]": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "['\"nothin\"']": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "['\"nothin\\'\"']": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "['nothin']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          },
+          "['nothing']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "[\"'nothing'\"]": [
+            [
+              "19",
+              "['nothing']"
+            ]
+          ],
+          "['\"nothing\"']": [
+            [
+              "19",
+              "['nothing']"
+            ]
+          ],
+          "['nothing']": [
+            [
+              "19",
+              "[\"'nothing'\"]"
+            ],
+            [
+              "19",
+              "['\"nothing\"']"
+            ]
+          ]
+        }
+      },
+      ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\nLOCKED_ANSWER\n>>> how_big(12)\nLOCKED_ANSWER\n>>> how_big(1)\nLOCKED_ANSWER\n>>> how_big(-1)\nLOCKED_ANSWER\n": {
+        "assessNum": "16",
+        "dictWA2DictInfo": {
+          "['big']": {
+            "dictTag2ConceptMsg": {
+              "strdsntneedquotes-stringsyntax": "18"
+            },
+            "dictTag2KIMsg": {
+              "strdsntneedquotes": "37"
+            },
+            "lstMisU": [
+              "strdsntneedquotes",
+              "strdsntneedquotes-stringsyntax"
+            ]
+          },
+          "['huge']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['nothin']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['small']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "[\"'huge'\"]": [
+            [
+              "16",
+              "['huge']"
+            ]
+          ],
+          "[\"nothin'\"]": [
+            [
+              "16",
+              "['huge']"
+            ],
+            [
+              "16",
+              "['small']"
+            ]
+          ],
+          "['None']": [
+            [
+              "16",
+              "['none']"
+            ]
+          ],
+          "['big small']": [
+            [
+              "16",
+              "['small big']"
+            ]
+          ],
+          "['huge']": [
+            [
+              "16",
+              "[\"'huge'\"]"
+            ],
+            [
+              "16",
+              "[\"nothin'\"]"
+            ]
+          ],
+          "['none']": [
+            [
+              "16",
+              "['None']"
+            ]
+          ],
+          "['small big']": [
+            [
+              "16",
+              "['big small']"
+            ]
+          ],
+          "['small']": [
+            [
+              "16",
+              "[\"nothin'\"]"
+            ]
+          ]
+        }
+      },
+      ">>> def so_big(x):\n...     if x > 10:\n...         print('huge')\n...     if x > 5:\n...         return 'big'\n...     if x > 0:\n...         print('small')\n...     print(\"nothin'\")\n>>> so_big(7)\n'big'\n>>> so_big(12)\nLOCKED_ANSWER\nLOCKED_ANSWER\n>>> so_big(1)\nLOCKED_ANSWER\nLOCKED_ANSWER\n": {
+        "assessNum": "21",
+        "dictWA2DictInfo": {
+          "[\"'big'\"]": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "[\"'huge'\"]": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "['huge', \"nothin'\"]": {
+            "dictTag2ConceptMsg": {
+              "ififisifelse-ifclause": "12",
+              "ififisifelse-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "ififisifelse": "39"
+            },
+            "lstMisU": [
+              "ififisifelse",
+              "ififisifelse-ifclause",
+              "ififisifelse-sloppy"
+            ]
+          },
+          "['huge', '\"nothin\\'\"']": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9",
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37",
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring",
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['huge', '']": {
+            "dictTag2ConceptMsg": {
+              "prntendsfn-printstring": "9",
+              "prntendsfn-printvsreturn": "17"
+            },
+            "dictTag2KIMsg": {
+              "prntendsfn": "41"
+            },
+            "lstMisU": [
+              "prntendsfn",
+              "prntendsfn-printstring",
+              "prntendsfn-printvsreturn"
+            ]
+          },
+          "['huge', 'None']": {
+            "dictTag2ConceptMsg": {
+              "prntendsfn-printstring": "9",
+              "prntendsfn-printvsreturn": "17"
+            },
+            "dictTag2KIMsg": {
+              "prntendsfn": "41"
+            },
+            "lstMisU": [
+              "prntendsfn",
+              "prntendsfn-printstring",
+              "prntendsfn-printvsreturn"
+            ]
+          },
+          "['huge', 'big']": {
+            "dictTag2ConceptMsg": {
+              "strdsntneedquotes-stringsyntax": "18"
+            },
+            "dictTag2KIMsg": {
+              "strdsntneedquotes": "37"
+            },
+            "lstMisU": [
+              "strdsntneedquotes",
+              "strdsntneedquotes-stringsyntax"
+            ]
+          },
+          "['huge', 'huge']": {
+            "dictTag2ConceptMsg": {
+              "prntrtnsprntedval-printreturnvalue": "8"
+            },
+            "dictTag2KIMsg": {
+              "prntrtnsprntedval": "40"
+            },
+            "lstMisU": [
+              "prntrtnsprntedval",
+              "prntrtnsprntedval-printreturnvalue"
+            ]
+          },
+          "['huge', 'nothin']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['huge', 'small']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['huge', \"'nothin'\"]": [
+            [
+              "21",
+              "['huge', 'nothin']"
+            ]
+          ],
+          "['huge', 'None']": [
+            [
+              "21",
+              "['huge', 'none']"
+            ]
+          ],
+          "['huge', 'none']": [
+            [
+              "21",
+              "['huge', 'None']"
+            ]
+          ],
+          "['huge', 'nothin']": [
+            [
+              "21",
+              "['huge', \"'nothin'\"]"
+            ]
+          ]
+        }
+      },
+      ">>> def so_big(x):\n...     if x > 10:\n...         print('huge')\n...     if x > 5:\n...         return 'big'\n...     if x > 0:\n...         print('small')\n...     print(\"nothin'\")\n>>> so_big(7)\n'big'\n>>> so_big(12)\nhuge\n'big'\n>>> so_big(1)\nLOCKED_ANSWER\nLOCKED_ANSWER\n": {
+        "assessNum": "22",
+        "dictWA2DictInfo": {
+          "[\"'small'\"]": {
+            "dictTag2ConceptMsg": {
+              "prntstrwithquotes-printstring": "9"
+            },
+            "dictTag2KIMsg": {
+              "prntstrwithquotes": "37"
+            },
+            "lstMisU": [
+              "prntstrwithquotes",
+              "prntstrwithquotes-printstring"
+            ]
+          },
+          "['huge']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          },
+          "['small', 'nothin']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> def so_big(x):\n...     if x > 10:\n...         print('huge')\n...     if x > 5:\n...         return 'big'\n...     if x > 0:\n...         print('small')\n...     print(\"nothin'\")\n>>> so_big(7)\nLOCKED_ANSWER\n>>> so_big(12)\nLOCKED_ANSWER\nLOCKED_ANSWER\n>>> so_big(1)\nLOCKED_ANSWER\nLOCKED_ANSWER\n": {
+        "assessNum": "20",
+        "dictWA2DictInfo": {
+          "[\"'big\"]": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          },
+          "['big']": {
+            "dictTag2ConceptMsg": {
+              "strdsntneedquotes-stringsyntax": "18"
+            },
+            "dictTag2KIMsg": {
+              "strdsntneedquotes": "37"
+            },
+            "lstMisU": [
+              "strdsntneedquotes",
+              "strdsntneedquotes-stringsyntax"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> def xk(c, d):\n...     if c == 4:\n...         return 6\n...     elif d >= 4:\n...         return 6 + 7 + c\n...     else:\n...         return 25\n>>> xk(10, 10)\n23\n>>> xk(10, 6)\n23\n>>> xk(4, 6)\nLOCKED_ANSWER\n>>> xk(0, 0)\nLOCKED_ANSWER\n": {
+        "assessNum": "15",
+        "dictWA2DictInfo": {
+          "['17']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {}
+      },
+      ">>> def xk(c, d):\n...     if c == 4:\n...         return 6\n...     elif d >= 4:\n...         return 6 + 7 + c\n...     else:\n...         return 25\n>>> xk(10, 10)\n23\n>>> xk(10, 6)\nLOCKED_ANSWER\n>>> xk(4, 6)\nLOCKED_ANSWER\n>>> xk(0, 0)\nLOCKED_ANSWER\n": {
+        "assessNum": "14",
+        "dictWA2DictInfo": {
+          "['19']": {
+            "dictTag2ConceptMsg": {
+              "sloppyvareval-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyvareval": "36"
+            },
+            "lstMisU": [
+              "sloppyvareval",
+              "sloppyvareval-sloppy"
+            ]
+          },
+          "['25']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['18']": [
+            [
+              "14",
+              "['25']"
+            ]
+          ],
+          "['25']": [
+            [
+              "14",
+              "['18']"
+            ],
+            [
+              "14",
+              "['6']"
+            ]
+          ],
+          "['6']": [
+            [
+              "14",
+              "['25']"
+            ]
+          ]
+        }
+      },
+      ">>> def xk(c, d):\n...     if c == 4:\n...         return 6\n...     elif d >= 4:\n...         return 6 + 7 + c\n...     else:\n...         return 25\n>>> xk(10, 10)\nLOCKED_ANSWER\n>>> xk(10, 6)\nLOCKED_ANSWER\n>>> xk(4, 6)\nLOCKED_ANSWER\n>>> xk(0, 0)\nLOCKED_ANSWER\n": {
+        "assessNum": "13",
+        "dictWA2DictInfo": {
+          "['25']": {
+            "dictTag2ConceptMsg": {
+              "sloppyifcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyifcondition": "35"
+            },
+            "lstMisU": [
+              "sloppyifcondition",
+              "sloppyifcondition-sloppy"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['25']": [
+            [
+              "13",
+              "['6 + 7 + c']"
+            ],
+            [
+              "13",
+              "['6']"
+            ]
+          ],
+          "['6 + 7 + c']": [
+            [
+              "13",
+              "['25']"
+            ]
+          ],
+          "['6']": [
+            [
+              "13",
+              "['25']"
+            ]
+          ]
+        }
+      },
+      ">>> n = 3\n>>> while n >= 0:\n...     n -= 1\n...     print(n)\nLOCKED_ANSWER\nLOCKED_ANSWER\nLOCKED_ANSWER\nLOCKED_ANSWER\n": {
+        "assessNum": "23",
+        "dictWA2DictInfo": {
+          "['-1']": {
+            "dictTag2ConceptMsg": {
+              "sloppyskipprnt-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyskipprnt": "45"
+            },
+            "lstMisU": [
+              "sloppyskipprnt",
+              "sloppyskipprnt-sloppy"
+            ]
+          },
+          "['2', '1', '0', '']": {
+            "dictTag2ConceptMsg": {
+              "sloppyloopcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyloopcondition": "43"
+            },
+            "lstMisU": [
+              "sloppyloopcondition",
+              "sloppyloopcondition-sloppy"
+            ]
+          },
+          "['2', '1', '0', '0']": {
+            "dictTag2ConceptMsg": {
+              "negnumnotvalid-negativenumbers": "16",
+              "sloppyloopcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "negnumnotvalid": "44",
+              "sloppyloopcondition": "43"
+            },
+            "lstMisU": [
+              "negnumnotvalid",
+              "negnumnotvalid-negativenumbers",
+              "sloppyloopcondition",
+              "sloppyloopcondition-sloppy"
+            ]
+          },
+          "['2', '1', '0', '3']": {
+            "dictTag2ConceptMsg": {
+              "negnumnotvalid-negativenumbers": "16"
+            },
+            "dictTag2KIMsg": {
+              "negnumnotvalid": "44"
+            },
+            "lstMisU": [
+              "negnumnotvalid",
+              "negnumnotvalid-negativenumbers"
+            ]
+          },
+          "['2', '1', '0', 'False']": {
+            "dictTag2ConceptMsg": {
+              "negnumnotvalid-negativenumbers": "16"
+            },
+            "dictTag2KIMsg": {
+              "negnumnotvalid": "44"
+            },
+            "lstMisU": [
+              "negnumnotvalid",
+              "negnumnotvalid-negativenumbers"
+            ]
+          },
+          "['2', '1', '0', 'Infinite Loop']": {
+            "dictTag2ConceptMsg": {
+              "negnumnotvalid-negativenumbers": "16"
+            },
+            "dictTag2KIMsg": {
+              "negnumnotvalid": "44"
+            },
+            "lstMisU": [
+              "negnumnotvalid",
+              "negnumnotvalid-negativenumbers"
+            ]
+          },
+          "['2', '1', '0', 'None']": {
+            "dictTag2ConceptMsg": {
+              "sloppyloopcondition-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyloopcondition": "43"
+            },
+            "lstMisU": [
+              "sloppyloopcondition",
+              "sloppyloopcondition-sloppy"
+            ]
+          },
+          "['2', '1', '0', 'none']": {
+            "dictTag2ConceptMsg": {
+              "negnumnotvalid-negativenumbers": "16"
+            },
+            "dictTag2KIMsg": {
+              "negnumnotvalid": "44"
+            },
+            "lstMisU": [
+              "negnumnotvalid",
+              "negnumnotvalid-negativenumbers"
+            ]
+          },
+          "['3']": {
+            "dictTag2ConceptMsg": {
+              "sloppyskipline-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyskipline": "42"
+            },
+            "lstMisU": [
+              "sloppyskipline",
+              "sloppyskipline-sloppy"
+            ]
+          },
+          "['Infinite Loop']": {
+            "dictTag2ConceptMsg": {
+              "negnumnotvalid-negativenumbers": "16",
+              "sloppyskipline-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "negnumnotvalid": "44",
+              "sloppyskipline": "42"
+            },
+            "lstMisU": [
+              "negnumnotvalid",
+              "negnumnotvalid-negativenumbers",
+              "sloppyskipline",
+              "sloppyskipline-sloppy"
+            ]
+          },
+          "['n']": {
+            "dictTag2ConceptMsg": {
+              "bindvartovarname-assignment": "3",
+              "bindvartovarname-evalvar": "5"
+            },
+            "dictTag2KIMsg": {
+              "bindvartovarname": "46"
+            },
+            "lstMisU": [
+              "bindvartovarname",
+              "bindvartovarname-assignment",
+              "bindvartovarname-evalvar"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['0']": [
+            [
+              "23",
+              "['False']"
+            ]
+          ],
+          "['2', '2']": [
+            [
+              "23",
+              "['2', 'n']"
+            ]
+          ],
+          "['2', '3']": [
+            [
+              "23",
+              "['2', 'n']"
+            ]
+          ],
+          "['2', 'n']": [
+            [
+              "23",
+              "['2', '2']"
+            ],
+            [
+              "23",
+              "['2', '3']"
+            ]
+          ],
+          "['False']": [
+            [
+              "23",
+              "['0']"
+            ]
+          ]
+        }
+      },
+      ">>> n = 4\n>>> while n > 0:\n...     n += 1\n...     print(n)\nLOCKED_ANSWER\n": {
+        "assessNum": "24",
+        "dictWA2DictInfo": {
+          "['3']": {
+            "dictTag2ConceptMsg": {
+              "sloppyarith-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppyarith": "47"
+            },
+            "lstMisU": [
+              "sloppyarith",
+              "sloppyarith-sloppy"
+            ]
+          },
+          "['4']": {
+            "dictTag2ConceptMsg": {
+              "sloppynoreadinstructions-sloppy": "0",
+              "sloppyskipline-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppynoreadinstructions": "33",
+              "sloppyskipline": "42"
+            },
+            "lstMisU": [
+              "sloppynoreadinstructions",
+              "sloppynoreadinstructions-sloppy",
+              "sloppyskipline",
+              "sloppyskipline-sloppy"
+            ]
+          },
+          "['5']": {
+            "dictTag2ConceptMsg": {
+              "sloppynoreadinstructions-sloppy": "0"
+            },
+            "dictTag2KIMsg": {
+              "sloppynoreadinstructions": "33"
+            },
+            "lstMisU": [
+              "sloppynoreadinstructions",
+              "sloppynoreadinstructions-sloppy"
+            ]
+          },
+          "['Infinite loop']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          },
+          "['infinite loop']": {
+            "dictTag2ConceptMsg": {},
+            "dictTag2KIMsg": {
+              "correct": "22"
+            },
+            "lstMisU": [
+              "correct"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['0']": [
+            [
+              "24",
+              "['4']"
+            ]
+          ],
+          "['1']": [
+            [
+              "24",
+              "['3']"
+            ],
+            [
+              "24",
+              "['4']"
+            ]
+          ],
+          "['2']": [
+            [
+              "24",
+              "['3']"
+            ]
+          ],
+          "['3']": [
+            [
+              "24",
+              "['1']"
+            ],
+            [
+              "24",
+              "['2']"
+            ],
+            [
+              "24",
+              "['6']"
+            ]
+          ],
+          "['4']": [
+            [
+              "24",
+              "['0']"
+            ],
+            [
+              "24",
+              "['1']"
+            ],
+            [
+              "24",
+              "['6']"
+            ]
+          ],
+          "['6']": [
+            [
+              "24",
+              "['3']"
+            ],
+            [
+              "24",
+              "['4']"
+            ]
+          ]
+        }
+      },
+      ">>> x = [1, 3, [5, 7], 9]\nLOCKED_ANSWER\n>>> x = [[7]]\nLOCKED_ANSWER\n>>> x = [1, [2, [3, [4, [5, [6, [7]]]]]]]\nLOCKED_ANSWER\n": {
+        "assessNum": "27",
+        "dictWA2DictInfo": {
+          "['x[2,1]']": {
+            "dictTag2ConceptMsg": {
+              "lstindxusecommas-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "lstindxusecommas": "52"
+            },
+            "lstMisU": [
+              "lstindxusecommas",
+              "lstindxusecommas-listindexing"
+            ]
+          },
+          "['x[2[1]]']": {
+            "dictTag2ConceptMsg": {
+              "lstindxusenestbrackets-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "lstindxusenestbrackets": "49"
+            },
+            "lstMisU": [
+              "lstindxusenestbrackets",
+              "lstindxusenestbrackets-listindexing"
+            ]
+          },
+          "['x[3]']": {
+            "dictTag2ConceptMsg": {
+              "nestedlstisflat-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "nestedlstisflat": "50"
+            },
+            "lstMisU": [
+              "nestedlstisflat",
+              "nestedlstisflat-listindexing"
+            ]
+          },
+          "['x[3][2]']": {
+            "dictTag2ConceptMsg": {
+              "lstindxstartatone-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "lstindxstartatone": "51"
+            },
+            "lstMisU": [
+              "lstindxstartatone",
+              "lstindxstartatone-listindexing"
+            ]
+          },
+          "['x[4]']": {
+            "dictTag2ConceptMsg": {
+              "lstindxstartatone-listindexing": "20",
+              "nestedlstisflat-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "lstindxstartatone": "51",
+              "nestedlstisflat": "50"
+            },
+            "lstMisU": [
+              "lstindxstartatone",
+              "lstindxstartatone-listindexing",
+              "nestedlstisflat",
+              "nestedlstisflat-listindexing"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['0']": [
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ],
+          "['1']": [
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ],
+          "['3']": [
+            [
+              "27",
+              "['x[0]']"
+            ],
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ],
+          "['4']": [
+            [
+              "27",
+              "['x[0]']"
+            ],
+            [
+              "27",
+              "['x[1]']"
+            ],
+            [
+              "27",
+              "['x[4]']"
+            ]
+          ],
+          "['5']": [
+            [
+              "27",
+              "['x[0]']"
+            ],
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ],
+          "['6']": [
+            [
+              "27",
+              "['x[0]']"
+            ],
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ],
+          "['7']": [
+            [
+              "27",
+              "['x[0]']"
+            ],
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ],
+          "['Error']": [
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ],
+          "['[3][1]']": [
+            [
+              "27",
+              "['x[3][1]']"
+            ]
+          ],
+          "['x[0]']": [
+            [
+              "27",
+              "['3']"
+            ],
+            [
+              "27",
+              "['4']"
+            ],
+            [
+              "27",
+              "['5']"
+            ],
+            [
+              "27",
+              "['6']"
+            ],
+            [
+              "27",
+              "['7']"
+            ],
+            [
+              "27",
+              "['x[5]']"
+            ],
+            [
+              "27",
+              "['x[7]']"
+            ]
+          ],
+          "['x[1]']": [
+            [
+              "27",
+              "['0']"
+            ],
+            [
+              "27",
+              "['1']"
+            ],
+            [
+              "27",
+              "['3']"
+            ],
+            [
+              "27",
+              "['4']"
+            ],
+            [
+              "27",
+              "['5']"
+            ],
+            [
+              "27",
+              "['6']"
+            ],
+            [
+              "27",
+              "['7']"
+            ],
+            [
+              "27",
+              "['Error']"
+            ],
+            [
+              "27",
+              "['x[5]']"
+            ],
+            [
+              "27",
+              "['x[7]']"
+            ]
+          ],
+          "['x[3, 2]']": [
+            [
+              "27",
+              "['x[3][2]']"
+            ]
+          ],
+          "['x[3]']": [
+            [
+              "27",
+              "['x[5]']"
+            ]
+          ],
+          "['x[3][1]']": [
+            [
+              "27",
+              "['[3][1]']"
+            ]
+          ],
+          "['x[3][2]']": [
+            [
+              "27",
+              "['x[3, 2]']"
+            ]
+          ],
+          "['x[4]']": [
+            [
+              "27",
+              "['4']"
+            ],
+            [
+              "27",
+              "['x[5]']"
+            ]
+          ],
+          "['x[5]']": [
+            [
+              "27",
+              "['x[0]']"
+            ],
+            [
+              "27",
+              "['x[1]']"
+            ],
+            [
+              "27",
+              "['x[3]']"
+            ],
+            [
+              "27",
+              "['x[4]']"
+            ]
+          ],
+          "['x[7]']": [
+            [
+              "27",
+              "['x[0]']"
+            ],
+            [
+              "27",
+              "['x[1]']"
+            ]
+          ]
+        }
+      },
+      ">>> x = [1, 3, [5, 7], 9]\nx[2][1]\n>>> x = [[7]]\nLOCKED_ANSWER\n>>> x = [1, [2, [3, [4, [5, [6, [7]]]]]]]\nLOCKED_ANSWER\n": {
+        "assessNum": "28",
+        "dictWA2DictInfo": {
+          "['x[0]']": {
+            "dictTag2ConceptMsg": {
+              "nestedlstisflat-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "nestedlstisflat": "50"
+            },
+            "lstMisU": [
+              "nestedlstisflat",
+              "nestedlstisflat-listindexing"
+            ]
+          },
+          "['x[[0]]']": {
+            "dictTag2ConceptMsg": {
+              "lstindxusenestbrackets-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "lstindxusenestbrackets": "49"
+            },
+            "lstMisU": [
+              "lstindxusenestbrackets",
+              "lstindxusenestbrackets-listindexing"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['Error']": [
+            [
+              "28",
+              "['x[][0]']"
+            ]
+          ],
+          "['x[][0]']": [
+            [
+              "28",
+              "['Error']"
+            ]
+          ]
+        }
+      },
+      ">>> x = [1, 3, [5, 7], 9]\nx[2][1]\n>>> x = [[7]]\nx[0][0]\n>>> x = [1, [2, [3, [4, [5, [6, [7]]]]]]]\nLOCKED_ANSWER\n": {
+        "assessNum": "29",
+        "dictWA2DictInfo": {
+          "['x[6]']": {
+            "dictTag2ConceptMsg": {
+              "nestedlstisflat-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "nestedlstisflat": "50"
+            },
+            "lstMisU": [
+              "nestedlstisflat",
+              "nestedlstisflat-listindexing"
+            ]
+          },
+          "['x[6][0]']": {
+            "dictTag2ConceptMsg": {
+              "nestedlstisflat-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "nestedlstisflat": "50"
+            },
+            "lstMisU": [
+              "nestedlstisflat",
+              "nestedlstisflat-listindexing"
+            ]
+          },
+          "['x[7]']": {
+            "dictTag2ConceptMsg": {
+              "lstindxstartatone-listindexing": "20",
+              "nestedlstisflat-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "lstindxstartatone": "51",
+              "nestedlstisflat": "50"
+            },
+            "lstMisU": [
+              "lstindxstartatone",
+              "lstindxstartatone-listindexing",
+              "nestedlstisflat",
+              "nestedlstisflat-listindexing"
+            ]
+          },
+          "['x[7][0]']": {
+            "dictTag2ConceptMsg": {
+              "nestedlstisflat-listindexing": "20"
+            },
+            "dictTag2KIMsg": {
+              "nestedlstisflat": "50"
+            },
+            "lstMisU": [
+              "nestedlstisflat",
+              "nestedlstisflat-listindexing"
+            ]
+          }
+        },
+        "dictWA2LstAssessNum_WA": {
+          "['x[0]']": [
+            [
+              "29",
+              "['x[0][0]']"
+            ]
+          ],
+          "['x[0][0]']": [
+            [
+              "29",
+              "['x[0]']"
+            ],
+            [
+              "29",
+              "['x[7][0]']"
+            ]
+          ],
+          "['x[0][0][0][0][0]']": [
+            [
+              "29",
+              "['x[0][0][0][0][0][0]']"
+            ]
+          ],
+          "['x[0][0][0][0][0][0]']": [
+            [
+              "29",
+              "['x[0][0][0][0][0]']"
+            ]
+          ],
+          "['x[5]']": [
+            [
+              "29",
+              "['x[7]']"
+            ]
+          ],
+          "['x[5][0]']": [
+            [
+              "29",
+              "['x[6][0]']"
+            ],
+            [
+              "29",
+              "['x[7][0]']"
+            ]
+          ],
+          "['x[5][1]']": [
+            [
+              "29",
+              "['x[6]']"
+            ]
+          ],
+          "['x[5][1][0]']": [
+            [
+              "29",
+              "['x[6]']"
+            ]
+          ],
+          "['x[6]']": [
+            [
+              "29",
+              "['x[5][1]']"
+            ],
+            [
+              "29",
+              "['x[5][1][0]']"
+            ],
+            [
+              "29",
+              "['x[6][1]']"
+            ]
+          ],
+          "['x[6][0]']": [
+            [
+              "29",
+              "['x[5][0]']"
+            ],
+            [
+              "29",
+              "['x[6][1]']"
+            ]
+          ],
+          "['x[6][1]']": [
+            [
+              "29",
+              "['x[6]']"
+            ],
+            [
+              "29",
+              "['x[6][0]']"
+            ]
+          ],
+          "['x[7]']": [
+            [
+              "29",
+              "['x[5]']"
+            ]
+          ],
+          "['x[7][0]']": [
+            [
+              "29",
+              "['x[0][0]']"
+            ],
+            [
+              "29",
+              "['x[5][0]']"
+            ]
+          ]
+        }
+      }
+    },
+    "dictAssessNum2AssessId": {
+      "0": ">>> 0 or True\nLOCKED_ANSWER\n>>> not '' or not 0 and False\nLOCKED_ANSWER\n>>> 13 and False\nLOCKED_ANSWER\n",
+      "1": ">>> 0 or True\nTrue\n>>> not '' or not 0 and False\nLOCKED_ANSWER\n>>> 13 and False\nLOCKED_ANSWER\n",
+      "10": ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\n0\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n",
+      "11": ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\n0\n>>> False or 1\n1\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n",
+      "12": ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\n0\n>>> False or 1\n1\n>>> 1 and 3 and 6 and 10 and 15\n15\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n",
+      "13": ">>> def xk(c, d):\n...     if c == 4:\n...         return 6\n...     elif d >= 4:\n...         return 6 + 7 + c\n...     else:\n...         return 25\n>>> xk(10, 10)\nLOCKED_ANSWER\n>>> xk(10, 6)\nLOCKED_ANSWER\n>>> xk(4, 6)\nLOCKED_ANSWER\n>>> xk(0, 0)\nLOCKED_ANSWER\n",
+      "14": ">>> def xk(c, d):\n...     if c == 4:\n...         return 6\n...     elif d >= 4:\n...         return 6 + 7 + c\n...     else:\n...         return 25\n>>> xk(10, 10)\n23\n>>> xk(10, 6)\nLOCKED_ANSWER\n>>> xk(4, 6)\nLOCKED_ANSWER\n>>> xk(0, 0)\nLOCKED_ANSWER\n",
+      "15": ">>> def xk(c, d):\n...     if c == 4:\n...         return 6\n...     elif d >= 4:\n...         return 6 + 7 + c\n...     else:\n...         return 25\n>>> xk(10, 10)\n23\n>>> xk(10, 6)\n23\n>>> xk(4, 6)\nLOCKED_ANSWER\n>>> xk(0, 0)\nLOCKED_ANSWER\n",
+      "16": ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\nLOCKED_ANSWER\n>>> how_big(12)\nLOCKED_ANSWER\n>>> how_big(1)\nLOCKED_ANSWER\n>>> how_big(-1)\nLOCKED_ANSWER\n",
+      "17": ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\n'big'\n>>> how_big(12)\nLOCKED_ANSWER\n>>> how_big(1)\nLOCKED_ANSWER\n>>> how_big(-1)\nLOCKED_ANSWER\n",
+      "18": ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\n'big'\n>>> how_big(12)\nhuge\n>>> how_big(1)\nLOCKED_ANSWER\n>>> how_big(-1)\nLOCKED_ANSWER\n",
+      "19": ">>> def how_big(x):\n...     if x > 10:\n...         print('huge')\n...     elif x > 5:\n...         return 'big'\n...     elif x > 0:\n...         print('small')\n...     else:\n...         print(\"nothin'\")\n>>> how_big(7)\n'big'\n>>> how_big(12)\nhuge\n>>> how_big(1)\nsmall\n>>> how_big(-1)\nLOCKED_ANSWER\n",
+      "2": ">>> 0 or True\nTrue\n>>> not '' or not 0 and False\nTrue\n>>> 13 and False\nLOCKED_ANSWER\n",
+      "20": ">>> def so_big(x):\n...     if x > 10:\n...         print('huge')\n...     if x > 5:\n...         return 'big'\n...     if x > 0:\n...         print('small')\n...     print(\"nothin'\")\n>>> so_big(7)\nLOCKED_ANSWER\n>>> so_big(12)\nLOCKED_ANSWER\nLOCKED_ANSWER\n>>> so_big(1)\nLOCKED_ANSWER\nLOCKED_ANSWER\n",
+      "21": ">>> def so_big(x):\n...     if x > 10:\n...         print('huge')\n...     if x > 5:\n...         return 'big'\n...     if x > 0:\n...         print('small')\n...     print(\"nothin'\")\n>>> so_big(7)\n'big'\n>>> so_big(12)\nLOCKED_ANSWER\nLOCKED_ANSWER\n>>> so_big(1)\nLOCKED_ANSWER\nLOCKED_ANSWER\n",
+      "22": ">>> def so_big(x):\n...     if x > 10:\n...         print('huge')\n...     if x > 5:\n...         return 'big'\n...     if x > 0:\n...         print('small')\n...     print(\"nothin'\")\n>>> so_big(7)\n'big'\n>>> so_big(12)\nhuge\n'big'\n>>> so_big(1)\nLOCKED_ANSWER\nLOCKED_ANSWER\n",
+      "23": ">>> n = 3\n>>> while n >= 0:\n...     n -= 1\n...     print(n)\nLOCKED_ANSWER\nLOCKED_ANSWER\nLOCKED_ANSWER\nLOCKED_ANSWER\n",
+      "24": ">>> n = 4\n>>> while n > 0:\n...     n += 1\n...     print(n)\nLOCKED_ANSWER\n",
+      "25": ">>> def go(n):\n...     if n % 2 != 0:\n...         print(n / 2)\n...         return\n...     while n > 0:\n...         print(n)\n...         n = n // 2\n>>> go(4)\nLOCKED_ANSWER\nLOCKED_ANSWER\nLOCKED_ANSWER\n>>> go(5)\nLOCKED_ANSWER\n",
+      "26": ">>> def go(n):\n...     if n % 2 != 0:\n...         print(n / 2)\n...         return\n...     while n > 0:\n...         print(n)\n...         n = n // 2\n>>> go(4)\n4\n2\n1\n>>> go(5)\nLOCKED_ANSWER\n",
+      "27": ">>> x = [1, 3, [5, 7], 9]\nLOCKED_ANSWER\n>>> x = [[7]]\nLOCKED_ANSWER\n>>> x = [1, [2, [3, [4, [5, [6, [7]]]]]]]\nLOCKED_ANSWER\n",
+      "28": ">>> x = [1, 3, [5, 7], 9]\nx[2][1]\n>>> x = [[7]]\nLOCKED_ANSWER\n>>> x = [1, [2, [3, [4, [5, [6, [7]]]]]]]\nLOCKED_ANSWER\n",
+      "29": ">>> x = [1, 3, [5, 7], 9]\nx[2][1]\n>>> x = [[7]]\nx[0][0]\n>>> x = [1, [2, [3, [4, [5, [6, [7]]]]]]]\nLOCKED_ANSWER\n",
+      "3": ">>> True and 13\nLOCKED_ANSWER\n>>> False or 0\nLOCKED_ANSWER\n>>> not 10\nLOCKED_ANSWER\n>>> not None\nLOCKED_ANSWER\n",
+      "4": ">>> True and 13\n13\n>>> False or 0\nLOCKED_ANSWER\n>>> not 10\nLOCKED_ANSWER\n>>> not None\nLOCKED_ANSWER\n",
+      "5": ">>> True and 13\n13\n>>> False or 0\n0\n>>> not 10\nLOCKED_ANSWER\n>>> not None\nLOCKED_ANSWER\n",
+      "6": ">>> True and 13\n13\n>>> False or 0\n0\n>>> not 10\nFalse\n>>> not None\nLOCKED_ANSWER\n",
+      "7": ">>> True and 1 / 0 and False\nLOCKED_ANSWER\n>>> True or 1 / 0 or False\nLOCKED_ANSWER\n>>> True and 0\nLOCKED_ANSWER\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n",
+      "8": ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nLOCKED_ANSWER\n>>> True and 0\nLOCKED_ANSWER\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n",
+      "9": ">>> True and 1 / 0 and False\nError\n>>> True or 1 / 0 or False\nTrue\n>>> True and 0\nLOCKED_ANSWER\n>>> False or 1\nLOCKED_ANSWER\n>>> 1 and 3 and 6 and 10 and 15\nLOCKED_ANSWER\n>>> 0 or False or 2 or 1 / 0\nLOCKED_ANSWER\n"
+    },
+    "dictId2Msg": {
+      "0": "Try:\n1) Reading the code or instructions more carefully,\n2) Writing out the variable's values, or\n3) Drawing an environment diagram.",
+      "1": "In short-circuiting Python only cares about false-y values while evaluating an\n| and | expression, and truth-y values while evaluating an | or | expression. A\n| <FALSE-Y VAL> and <VAL> | will always evaluate to | False |, and a\n| <TRUTH-Y VAL> or <VAL> | will always evaluate to | True | so as soon as one\nof these values is known, the other subexpressions is superfluous, and\ntherefore Python does NOT evaluate them.",
+      "10": "An expression is a combination of values, variables, operators, and functions\nthat a programming language interprets and evaluates to the simplest value.\nPrimitive values display themselves, while expressions are evaluated to display\nthe resulting value. Expression are evaluated upon hitting \"Enter\" or \"Return\".\n\nFor example,\n>>> 1             # Integers are primitive values\n1\n>>> \"hello world\" # Strings are primitive values\n'hello world'\n>>> square(2)     # Python evaluates the call expression of | square |\n4\n",
+      "11": "| or | either returns the first true value evaluated in an expression or the\nlast value of that expression if all the operands are false.",
+      "12": "A conditional statement consists of a series of headers and suites: a required\n| if | clause, an optional sequence of | elif | clauses, and finally an optional\n| else | clause. To execute a conditional clause, each clause is considered in\norder: (1) Evaluate the header's expression. (2) If it is a true value, execute\nthe suite. Then, skip over all subsequent clauses in the conditional statement.\n(3) If the | else | clause is reached, only its suite is executed.",
+      "13": "In Python there are boolean primitives | True | and | False | as opposed to\nprior languages that use | 1 | and | 0 |.",
+      "14": "In Python, just like with arithmetic operators, there is a specific order of\noperations for boolean operators. Evaluating from left to right, expressions\nwithin parentheses have the highest priority, followed by | not |, then | and |,\nand False or  finally by | or |. For example, | True and False or not False\n| is evaluated as | (True and False) or (not False)) | which is | True |.\n",
+      "15": "When evaluating a boolean expression, it is completely evaluated such that\nthere are no boolean operators left. For example, | False and not True or 3\n| becomes | False and False or 3 | then | False or 3 | and finally | 3 |.",
+      "16": "In Python negative numbers are represented with a negative sign in front of the\nnumber. Therefore the negative value of | 10 | is represented as | -10 |.",
+      "17": "When a function has a | print() | the arguments are always displayed in the\ninterpreter, but Python continues executing the rest of the function. This\ncontrasts with a | return | statement which ends the function and potentially\ndisplays the return value, depending on how the function was called.",
+      "18": "In Python, a string is a series of characters. We declare something as a string\nby surrounding it with either single | '' | or double quotes | \"\" |. We can\nrecognize strings in the Python interpreter by these quotes. For example: 'This\nis a string' and \"This string's contents has an apostrophe\".",
+      "19": "When dividing by zero, Python raises an error, displays the error, and stops\nrunning the program. This is because dividing by zero mathematically leads to an\nundefined value. So Python cannot compute the value needed to complete its task.\n",
+      "2": "| and | either returns the first false value evaluated in an expression or the\nlast value of that expression if all the operands are true.",
+      "20": "When indexing into a list, we start counting at 0. This means to get the first\nelement we must use the index zero. For example, in this list | x = [1, 2, 3] |\nto get | 1 | use | x[0] |. Notice that the value returned is only the element\nat that index.",
+      "21": "Remember the difference between | and | and | or |.",
+      "22": "Typo?",
+      "23": "What are the values a boolean expression can evaluate to?",
+      "24": "How are boolean values represented in Python?",
+      "25": "In what order are boolean expressions evaluated?",
+      "26": "What about the | not |?",
+      "27": "What values are false-y in Python?",
+      "28": "Can't the expression be evaluated more?",
+      "29": "Is a nonzero value truth-y or false-y?",
+      "3": "An assignment statement first evaluates the expression on the right side of the\n| = | operator to get a value. This value is then bound to the name on the left\nside of the | = | in the _first_ frame in the current environment.\n\nFor example,\n>>> a = 0\n>>> a == 0\nTrue\n\nNotice Python distinguishes assignment | = | from equality comparison | == |.\nIn addition, executing an assignment statement has no return value output,\nunlike evaluating an expression.",
+      "30": "When does | and | short circuit?",
+      "31": "When does | or | short circuit?",
+      "32": "Can Python divide by | 0 |?",
+      "33": "Double check the instructions?",
+      "34": "What about short circuiting?",
+      "35": "Double check the if condition?",
+      "36": "Double check the variable's value?",
+      "37": "Is this printing or returning the string?",
+      "38": "Hmm... Are there more than just | if | clauses there?",
+      "39": "Hmm... Are there | elif | or | else | clauses here?",
+      "4": "When it comes to division, Python provides two infix operators: | / |\nand | // |. The operator | / | is traditional division, so that it results in a\nfloating point or decimal value, even if the divisor evenly divides the\ndividend. For example, | 5 / 4 | evaluates to | 1.25 |.\n\nThe | // | operator however floors the result down to an integer. Additionally,\nif one of the operands is negative, the result is rounded *towards* negative\ninfinity (away from zero). For example, | 5 // 4 | evaluates to | 1 | and\n| -5 // 4 | evaluates to | -2 |.",
+      "40": "What is | print() |'s return value?",
+      "41": "What effect does | print() | have in a function?",
+      "42": "Hmm... Did you miss a line of code?",
+      "43": "When does the loop end?",
+      "44": "What about negative numbers?",
+      "45": "Hmm... Missed a | print() |?",
+      "46": "Hmm... What is the variable bound to?",
+      "47": "Hmm... The math doesn't seem to add up.",
+      "48": "What is the difference between | \\ | and | \\ |?",
+      "49": "When indexing into a nested list, where do the brackets go?",
+      "5": "When evaluating a variable such as | x |, its value is based on what it was\nassigned. However there may be multiple variables with the same name throughout \nthe environment. To find the correct value the following steps are followed:\n1. Look in the current local frame's environment for the variable's name.\n2. If variable name is found, use that value.\n3. If variable name is not found, go to the parent frame and repeat step 1.\n4. If run out of frames (reach the Global frame) and variable name cannot be \nfound, raise NameError.\n\nFor example,\n>>> y = 2\n>>> def foo():\n...     print(y)  # y will be looked up in foo's parent frame, the Global Frame\n...     print(z)\n...\n>>> foo()\n2\nNameError: name 'z' is not defined",
+      "50": "How many elements are in that list? What type are they?",
+      "51": "What index is the first element of a list?",
+      "52": "Remember how Python indexes into nested lists.",
+      "6": "The boolean | not | operator is used to negate the boolean value of its operand.\nIt can also be paired with operators that perform comparisons and return\nboolean values, such as the keyword | is |. Note that when using | not | in\nconjunction with a value, the resulting evaluation will always be | True |\nor | False |.\n\nFor example,\n>>> not 0  # 0 is a false-y value\nTrue\n>>> not True\nFalse\n>>> 0 is not 1\nTrue",
+      "7": "In Python, there are several values that are considered false-y such that in\ntheir interactions with other values in a boolean expression, they\nfunctionally evaluate as False.\n\nThese values are:\n1. | False |\n2. | None |\n3. | 0 | (all other integers are True)\n4. |  |\n5. | () |, | [] |, | {} | or any other empty Data Structure",
+      "8": "The function | print() | implicitly returns the value of | None |. The Python\ninterpretor does not display | None | unless it is explicitly forced to do so.",
+      "9": "The function | print() | displays the value of its arguments separated by\nspaces. The Python interpretor displays the value in the Terminal. Note that\na string's value is the text between the quotes, and thus when printing the\nquotes are not displayed.\n\nFor example, printing a string such as \"Hello World\" will result in the\ninterpretor displaying | Hello World | (no quotes) in the Terminal."
+    },
+    "dictTg2Func": {
+      "0": "none",
+      "1": "tag2ConceptMsg",
+      "2": "tag2KIMsg"
+    },
+    "wrongAnsThresh": 2
+  }
+}
