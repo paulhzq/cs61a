@@ -1,0 +1,17 @@
+{
+    "name": "Quiz 1",
+    "endpoint": "cal/cs61a/fa16/quiz01",
+    "src": [
+        "quiz01.py"
+    ],
+    "tests": {
+        "quiz01.py:multiple": "doctest",
+        "quiz01.py:unique_digits": "doctest"
+    },
+    "protocols": [
+        "file_contents",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
