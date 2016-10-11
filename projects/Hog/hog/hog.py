@@ -401,10 +401,81 @@ def final_strategy(score, opponent_score):
     """Write a brief description of your final strategy.
 
     *** YOUR DESCRIPTION HERE ***
+    The program starts out by rolling -1 dice and taking advantage of the
+    pork chop roll. By rolling -1 and converting the dice to 4 sided, the
+    strategy limits the maximum and average amount of points the opponent could
+    potentially receive. The always_roll strategy also does not have the
+    ability to swap the dice settings back.
+
+
+    The next segment of code deals with edge cases and attempts to force
+    favorable rolls. The reason for optimal roll is due to the following:
+
+    (When Pigs Fly)
+    Rolls       Maximum Possible Score          Average Dice Value Needed
+    10          25 - 10 = 15                    1.5
+    7           25 - 7 = 18                     2.57
+    4           25 - 4 = 21                     5.25
+
+
+    Four rolls seems to be optimal b/c while the game is mostly played using
+    the four sided dice and therefore cannot achieve the average dice value, the
+    risk of rolling a one is minimized while eliminating any possibility of the
+    maximum score rule cutting off the raw roll value.
+    
+    rollZero is a temporary variable that represents the points you'd receive
+    if you rolled a zero that turn. The first conditional checks if score is
+    free bacon points away from winning, and then uses free bacon to ensure a
+    win. The following conditionals test for swine swap and hog wild, and the
+    conditionals are meant to either force favorable and avoid unfavorable
+    swaps.
+
+    The last set of conditionals deal with general strategy, in the case that
+    none of the edge case opportunities are presented. If I am currently in the
+    lead, if my score is greater than 75, I try to hinder the opponent by
+    changing up the type of dice that is used if I cannot acheve a score
+    higher than 2. Otherwise, I return a swap strategy that determines whether
+    I'm rolling the defaultRoll value unless I can achieve a value of 7, which
+    is a more conservative value than the same default swap strategy in the
+    case I'm behind (margin is 11 instead of 7). Finally, the last return
+    statement is only called if the scores are equal, in which I roll 4
+    in an attempt to break the tie.
+
     """
     # BEGIN PROBLEM 11
-    "*** REPLACE THIS LINE ***"
-    return 4  # Replace this statement
+    if score == 0:
+        return -1
+
+    defaultRoll = 4
+    rollZero = take_turn(0, opponent_score)
+    #Conditional that tries to close out game efficiently with hog wild
+    if score + rollZero >= 100:
+        return 0
+    #following conditionals check if hog wild and swine swap strategies are
+    #available and whether I'm on the favorable or unfavorable end of the deal
+    if (score + rollZero) * 2 == opponent_score:
+        return 0
+    if opponent_score * 2 == score - 1:
+        if rollZero > 1:
+            return 0
+    if (score + opponent_score)%7 == 0:
+        return defaultRoll + 2
+    if rollZero > defaultRoll + 2:
+        return 0
+
+    #If I am currently in the lead
+    if score > opponent_score:
+        if score > 75:
+            #If the game is almost ending because scores are high
+            return swap_strategy(score, opponent_score, 2, -1)
+        else:
+            #default strategy
+            return swap_strategy(score, opponent_score, 7, defaultRoll)
+    #If I am currently behind
+    if score < opponent_score:
+        #margin is greater than lead default strategy for more aggressive approach
+        return swap_strategy(score, opponent_score, 11, defaultRoll)
+    return defaultRoll
     # END PROBLEM 11
 check_strategy(final_strategy)
 
