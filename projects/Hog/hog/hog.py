@@ -272,6 +272,9 @@ def check_strategy(strategy, goal=GOAL_SCORE):
     """
     # BEGIN PROBLEM 6
     "*** REPLACE THIS LINE ***"
+    for score in range(0,goal):
+        for opponent_score in range(0,goal):
+            check_strategy_roll(score,opponent_score,strategy(score,opponent_score))
     # END PROBLEM 6
 
 
@@ -290,6 +293,13 @@ def make_averaged(fn, num_samples=1000):
     """
     # BEGIN PROBLEM 7
     "*** REPLACE THIS LINE ***"
+    def average(*args):
+        total,ave =0,0
+        for i in range(0,num_samples):
+            total+=fn(*args)# fn(*args) in this example could be roll_dice()
+        ave = total/num_samples
+        return ave
+    return average
     # END PROBLEM 7
 
 
@@ -304,6 +314,16 @@ def max_scoring_num_rolls(dice=six_sided, num_samples=1000):
     """
     # BEGIN PROBLEM 8
     "*** REPLACE THIS LINE ***"
+    max_num,prev_max_score= 0,0
+    i =1
+    while i <=10:
+        current_score=make_averaged(roll_dice,num_samples)(i,dice)
+        if current_score > prev_max_score:
+            max_num,prev_max_score=i,current_score
+        i+=1
+    return max_num
+
+   
     # END PROBLEM 8
 
 
@@ -354,7 +374,10 @@ def bacon_strategy(score, opponent_score, margin=8, num_rolls=4):
     """
     # BEGIN PROBLEM 9
     "*** REPLACE THIS LINE ***"
-    return 4  # Replace this statement
+    if take_turn(0,opponent_score)>=margin:
+        return 0
+    else:
+        return num_rolls  # Replace this statement
     # END PROBLEM 9
 check_strategy(bacon_strategy)
 
@@ -366,7 +389,10 @@ def swap_strategy(score, opponent_score, margin=8, num_rolls=4):
     """
     # BEGIN PROBLEM 10
     "*** REPLACE THIS LINE ***"
-    return 4  # Replace this statement
+    if take_turn(0,opponent_score)>=margin or 2*(score+take_turn(0,opponent_score))==opponent_score or 2*opponent_score==(score+take_turn(0,opponent_score)):
+        return 0
+    else:
+        return num_rolls  # Replace this statement
     # END PROBLEM 10
 check_strategy(swap_strategy)
 

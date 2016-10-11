@@ -8,11 +8,10 @@ test = {
           'code': r"""
           >>> # If this causes an error, write AssertionError
           >>> check_strategy(always_roll(5)) == None
-          bc6c4798917b91886d7fa5f56e42878f
-          # locked
+          True
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -22,11 +21,10 @@ test = {
           ...     return 5
           >>> # If this causes an error, write AssertionError
           >>> check_strategy(fail_15_20) == None
-          cfc38925cef46fde683fbb0cbb4d4025
-          # locked
+          AssertionError
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
