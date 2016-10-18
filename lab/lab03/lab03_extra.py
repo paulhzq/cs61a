@@ -15,9 +15,9 @@ def is_palindrome(n):
     True
     """
     x, y = n, 0
-    f = lambda: _____
+    f = lambda: y*10+x%10
     while x > 0:
-        x, y = _____, f()
+        x, y = x//10, f()
     return y == n
 
 def skip_mul(n):
@@ -30,6 +30,8 @@ def skip_mul(n):
     """
     if n == 2:
         return 2
+    elif n ==1:
+        return 1
     else:
         return n * skip_mul(n - 2)
 
@@ -45,6 +47,9 @@ def count_up(n):
     """
     def counter(i):
         "*** YOUR CODE HERE ***"
+        while i<n:
+            print(i)
+            counter(i+1)
     counter(1)
 
 def ab_plus_c(a, b, c):
@@ -58,6 +63,13 @@ def ab_plus_c(a, b, c):
     2
     """
     "*** YOUR CODE HERE ***"
+    if a==0 or b==0:
+        return c
+    elif a==1:
+        return b+c
+    else:
+        return b+ab_plus_c(a-1,b,c)
+
 
 def is_prime(n):
     """Returns True if n is a prime number and False otherwise.
@@ -70,6 +82,15 @@ def is_prime(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    def help(i):
+        while i<n:
+            if n%i ==0:
+                return False
+            else:
+                return help(i+1)
+        return True
+    return help(2)
+
 
 def interleaved_sum(n, odd_term, even_term):
     """Compute the sum odd_term(1) + even_term(2) + odd_term(3) + ..., up
@@ -80,6 +101,13 @@ def interleaved_sum(n, odd_term, even_term):
     29
     """
     "*** YOUR CODE HERE ***"
+    def interleaved_helper(n, term0, term1, k):
+        if k == n:
+            return term0(k)
+        return term0(k) + interleaved_helper(n, term1, term0, k+1)
+    return interleaved_helper(n, odd_term, even_term, 1)
+
+    
 
 def ten_pairs(n):
     """Return the number of ten-pairs within positive integer n.
@@ -92,3 +120,22 @@ def ten_pairs(n):
     6
     """
     "*** YOUR CODE HERE ***"
+    def count_digit(n, digit):
+        """Return how many times digit appears in n.
+
+        >>> count_digit(55055, 5)
+        4
+        """
+        if n == 0:
+            return 0
+        else:
+            if n%10 == digit:
+                return count_digit(n//10, digit) + 1
+            else:
+                return count_digit(n//10, digit)
+
+    if n < 10:
+        return 0
+    else:
+        return ten_pairs(n//10) + count_digit(n//10, 10 - n%10)
+
