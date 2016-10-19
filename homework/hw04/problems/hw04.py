@@ -18,6 +18,10 @@ def g(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    if n<=3:
+        return n
+    else:
+        return g(n-1)+2*g(n-2)+3*g(n-3)
 
 def g_iter(n):
     """Return the value of G(n), computed iteratively.
@@ -37,6 +41,16 @@ def g_iter(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    if 0<n<=3:
+        return n
+    else:
+        g1,g2,g3,i=1,2,3,3
+        while i<n:
+            g1,g2,g3=g2,g3,g3+2*g2+3*g1
+            i+=1
+        return g3
+
+
 
 def pingpong(n):
     """Return the nth element of the ping-pong sequence.
@@ -70,6 +84,16 @@ def pingpong(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    final,i,flip =0,1,False
+    while i<=n:
+        if not flip:
+            final +=1
+        else:
+            final -=1
+        if i%7==0 or has_seven(i):
+            flip = not flip
+        i+=1
+    return final
 
 def has_seven(k):
     """Returns True if at least one of the digits of k is a 7, False otherwise.
@@ -107,6 +131,19 @@ def count_change(amount):
     9828
     """
     "*** YOUR CODE HERE ***"
+    return count_using(1, amount)
+
+def count_using(min_coin, amount):
+    if amount < 0:
+        return 0
+    elif amount == 0:
+        return 1
+    elif min_coin > amount:
+        return 0
+    else:
+        with_min = count_using(min_coin, amount - min_coin)
+        without_min = count_using(2*min_coin, amount)
+        return with_min + without_min
 
 ###################
 # Extra Questions #
@@ -123,4 +160,4 @@ def make_anonymous_factorial():
     >>> check(HW_SOURCE_FILE, 'make_anonymous_factorial', ['Assign', 'AugAssign', 'FunctionDef', 'Recursion'])
     True
     """
-    return 'YOUR_EXPRESSION_HERE'
+    return (lambda f: lambda k: f(f, k))(lambda f, k: k if k == 1 else mul(k, f(f, sub(k, 1))))

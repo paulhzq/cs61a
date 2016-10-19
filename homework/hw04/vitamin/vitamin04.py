@@ -21,6 +21,8 @@ def taxicab(a, b):
     9
     """
     "*** YOUR CODE HERE ***"
+    return abs(street(a)-street(b))+abs(avenue(a)-avenue(b))
+
 
 def squares(s):
     """Returns a new list containing square roots of the elements of the
@@ -34,3 +36,11 @@ def squares(s):
     []
     """
     "*** YOUR CODE HERE ***"
+    """
+    lst =[]
+    for x in s:
+        if int(pow(x,0.5))==pow(x,0.5):
+            lst +=[int(pow(x,0.5))]
+    return lst
+    """
+    return [int(pow(x,0.5))for x in s if int(pow(x,0.5))==pow(x,0.5)]
