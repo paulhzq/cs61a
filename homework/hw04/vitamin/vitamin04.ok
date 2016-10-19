@@ -1,0 +1,21 @@
+{
+    "name": "Vitamin 4",
+    "endpoint": "cal/cs61a/fa16/vitamin04",
+    "src": [
+        "vitamin04.py"
+    ],
+    "tests": {
+        "vitamin04.py":  "doctest"
+    },
+    "default_tests": [
+        "taxicab",
+        "squares"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
