@@ -1,0 +1,30 @@
+test = {
+  'name': 'Problem 5',
+  'points': 2,
+  'suites': [
+    {
+      'cases': [
+        {
+          'code': r"""
+          >>> cluster1 = [
+          ...     make_restaurant('A', [-3, -4], [], 3, [make_review('A', 2)]),
+          ...     make_restaurant('B', [1, -1],  [], 1, [make_review('B', 1)]),
+          ...     make_restaurant('C', [2, -4],  [], 1, [make_review('C', 5)]),
+          ... ]
+          >>> find_centroid(cluster1) # should be a pair of decimals
+          dda11de662a1dda99b93cfc0d22a9eb5
+          # locked
+          """,
+          'hidden': False,
+          'locked': True
+        }
+      ],
+      'scored': True,
+      'setup': r"""
+      >>> from recommend import *
+      """,
+      'teardown': '',
+      'type': 'doctest'
+    }
+  ]
+}
