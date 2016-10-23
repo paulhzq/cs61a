@@ -1,0 +1,22 @@
+{
+    "name": "Vitamin 5",
+    "endpoint": "cal/cs61a/fa16/vitamin05",
+    "src": [
+        "vitamin05.py"
+    ],
+    "tests": {
+        "vitamin05.py": "doctest"
+    },
+    "default_tests": [
+        "replace_leaf",
+        "swap"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "analytics",
+        "unlock",
+        "grading",
+        "backup"
+    ]
+}
