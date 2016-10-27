@@ -69,6 +69,7 @@ def distance(city1, city2):
     5.0
     """
     "*** YOUR CODE HERE ***"
+    return sqrt((get_lat(city1)-get_lat(city2))**2+(get_lon(city1)-get_lon(city2))**2)
 
 # Q5
 def closer_city(lat, lon, city1, city2):
@@ -86,6 +87,12 @@ def closer_city(lat, lon, city1, city2):
     'Bucharest'
     """
     "*** YOUR CODE HERE ***"
+    new_city = make_city('arb', lat, lon)
+    dist1 = distance(city1, new_city)
+    dist2 = distance(city2, new_city)
+    if dist1 < dist2:
+         return get_name(city1)
+    return get_name(city2)
 
 # Connect N: Q6-11
 ######################
@@ -100,7 +107,8 @@ def create_row(size):
     ['-', '-', '-', '-', '-']
     """
     "*** YOUR CODE HERE ***"
-    return _______
+    //return ['-']*size
+    return ["-" for i in range(size)]
 
 
 def create_board(rows, columns):
@@ -110,7 +118,7 @@ def create_board(rows, columns):
     [['-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-']]
     """
     "*** YOUR CODE HERE ***"
-    return _______
+    return [create_row(columns) for i in range(rows)]
 
 
 def replace_elem(lst, index, elem):
@@ -126,7 +134,7 @@ def replace_elem(lst, index, elem):
     """
     assert index >= 0 and index < len(lst), 'Index is out of bounds'
     "*** YOUR CODE HERE ***"
-    return _______
+    return lst[:index] + [elem] + lst[(index + 1):]
 
 
 def get_piece(board, row, column):
@@ -142,7 +150,7 @@ def get_piece(board, row, column):
     '-'
     """
     "*** YOUR CODE HERE ***"
-    return _______
+    return board[row][column]
 
 
 def put_piece(board, max_rows, column, player):
@@ -166,6 +174,14 @@ def put_piece(board, max_rows, column, player):
     -1
     """
     "*** YOUR CODE HERE ***"
+    curr_row_index = max_rows - 1
+    while curr_row_index >= 0 and get_piece(board, curr_row_index, column) != "-":
+        curr_row_index -= 1
+    if curr_row_index >= 0:
+        new_row = replace_elem(board[curr_row_index], column, player)
+        new_board = replace_elem(board, curr_row_index, new_row)
+        board = new_board
+    return curr_row_index, board
 
 
 def make_move(board, max_rows, max_cols, col, player):
