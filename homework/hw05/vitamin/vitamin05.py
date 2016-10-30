@@ -84,6 +84,14 @@ def replace_leaf(t, old, new):
     True
     """
     "*** YOUR CODE HERE ***"
+    if is_leaf(t) and root(t) == old:
+        return tree(new)
+    else:
+        bs = [replace_leaf(b, old, new) for b in branches(t)]
+        return tree(root(t), bs)
+
+
+
 
 def swap(a, b):
     """Swap the contents of lists a and b.
@@ -97,3 +105,4 @@ def swap(a, b):
     [1, 'two', 3]
     """
     "*** YOUR CODE HERE ***"
+    a[:],b[:]=b[:],a[:]

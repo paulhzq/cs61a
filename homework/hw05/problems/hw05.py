@@ -31,18 +31,29 @@ def move_stack(n, start, end):
     """
     assert 1 <= start <= 3 and 1 <= end <= 3 and start != end, "Bad start/end"
     "*** YOUR CODE HERE ***"
+    if n==1:
+        print_move(start,end)
+    else:
+        middle=6-start-end
+        move_stack(n-1,start,middle)
+        print_move(start,end)
+        move_stack(n-1,middle,end)
+
 
 def interval(a, b):
     """Construct an interval from a to b."""
+    assert a <= b, 'Lower bound cannot be greater than upper bound'
     return [a, b]
 
 def lower_bound(x):
     """Return the lower bound of interval x."""
     "*** YOUR CODE HERE ***"
+    return x[0]
 
 def upper_bound(x):
     """Return the upper bound of interval x."""
     "*** YOUR CODE HERE ***"
+    return x[1]
 
 def str_interval(x):
     """Return a string representation of interval x."""
@@ -58,22 +69,30 @@ def add_interval(x, y):
 def mul_interval(x, y):
     """Return the interval that contains the product of any value in x and any
     value in y."""
-    p1 = x[0] * y[0]
-    p2 = x[0] * y[1]
-    p3 = x[1] * y[0]
-    p4 = x[1] * y[1]
-    return [min(p1, p2, p3, p4), max(p1, p2, p3, p4)]
+    p1=lower_bound(x)*lower_bound(y)
+    p2=lower_bound(x)*upper_bound(y)
+    p3=upper_bound(x)*lower_bound(y)
+    p4=upper_bound(x)*upper_bound(y)
+    #p1 = x[0] * y[0]
+    #p2 = x[0] * y[1]
+    #p3 = x[1] * y[0]
+    #p4 = x[1] * y[1]
+    return interval(min(p1, p2, p3, p4), max(p1, p2, p3, p4))
 
 def sub_interval(x, y):
     """Return the interval that contains the difference between any value in x
     and any value in y."""
     "*** YOUR CODE HERE ***"
+    lower =lower_bound(x)-upper_bound(y)
+    upper =upper_bound(x)-lower_bound(y)
+    return interval(lower,upper)
 
 def div_interval(x, y):
     """Return the interval that contains the quotient of any value in x divided by
     any value in y. Division is implemented as the multiplication of x by the
     reciprocal of y."""
     "*** YOUR CODE HERE ***"
+    assert not (lower_bound(y) <= 0 <= upper_bound(y)), 'Divide by zero'
     reciprocal_y = interval(1/upper_bound(y), 1/lower_bound(y))
     return mul_interval(x, reciprocal_y)
 
@@ -95,12 +114,27 @@ def check_par():
     >>> lower_bound(x) != lower_bound(y) or upper_bound(x) != upper_bound(y)
     True
     """
-    r1 = interval(1, 1) # Replace this line!
-    r2 = interval(1, 1) # Replace this line!
+    r1 = interval(1, 2) # Replace this line!
+    r2 = interval(3, 4) # Replace this line!
     return r1, r2
 
 def multiple_references_explanation():
-    return """The multiple reference problem..."""
+    return """The multiple reference problem
+    The true value
+    within a particular interval is fixed (though unknown).  Nested
+    combinations that refer to the same interval twice may assume two different
+    true values for the same interval, which is an error that results in
+    intervals that are larger than they should be.
+
+    Consider the case of i * i, where i is an interval from -1 to 1.  No value
+    within this interval, when squared, will give a negative result.  However,
+    our mul_interval function will allow us to choose 1 from the first
+    reference to i and -1 from the second, giving an erroneous lower bound of
+    -1.
+
+    Hence, a program like par2 is better than par1 because it never combines
+    the same interval more than once.
+    """
 
 def quadratic(x, a, b, c):
     """Return the interval that is the range of the quadratic defined by
@@ -112,6 +146,13 @@ def quadratic(x, a, b, c):
     '0 to 10'
     """
     "*** YOUR CODE HERE ***"
+    extremum = -b / (2*a)
+    f = lambda x: a * x * x + b * x + c
+    l, u, e = map(f, (lower_bound(x), upper_bound(x), extremum))
+    if extremum >= lower_bound(x) and extremum <= upper_bound(x):
+        return interval(min(l, u, e), max(l, u, e))
+    else:
+        return interval(min(l, u), max(l, u))
 
 def polynomial(x, c):
     """Return the interval that is the range of the polynomial defined by
