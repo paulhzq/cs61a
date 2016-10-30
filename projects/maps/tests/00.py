@@ -9,39 +9,33 @@ test = {
           >>> square = lambda x: x * x
           >>> is_odd = lambda x: x % 2 == 1
           >>> map_and_filter([1, 2, 3, 4, 5], square, is_odd)
-          dab62dc32550156f38bcbd91d9a48b1a
-          # locked
+          [1, 9, 25]
           >>> map_and_filter(['hi', 'hello', 'hey', 'world'],
           ...                lambda x: x[4], lambda x: len(x) > 4)
-          08d56251df05a668e2cc1a38b0cff68b
-          # locked
+          ['o', 'd']
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> key_of_min_value({1: 6, 2: 5, 3: 4})
-          f86124ac9392b60456505ccefe002925
-          # locked
+          3
           >>> key_of_min_value({'a': 6, 'b': 5, 'c': 4})
-          78ecf8091bdb914c48fc1311604e0c87
-          # locked
+          'c'
           >>> key_of_min_value({'hello': 'world', 'hi': 'there'})
-          c8a87e36951a07938124fd8df6fbaf1e
-          # locked
+          'hi'
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> enumerate([6, 'one', 'a'], 3)[1]
-          736a16a06f9e289bf5bcd4cd6f238b2c
-          # locked
+          [4, 'one']
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -54,7 +48,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '805cc5fdbc962de6ce1fb691ed01ab75',
+          'answer': 'zip(xs, ys)',
           'choices': [
             'xs + ys',
             '(xs, ys)',
@@ -62,7 +56,7 @@ test = {
             'zip(xs, ys)'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           Consider the lists xs = [6, 1, 4] and ys = [2, 6, 2]. Which
           of the choices below for EXPR would produce the following
