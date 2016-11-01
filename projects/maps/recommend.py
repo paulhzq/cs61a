@@ -5,6 +5,7 @@ from data import ALL_RESTAURANTS, CATEGORIES, USER_FILES, load_user_file
 from ucb import main, trace, interact
 from utils import distance, mean, zip, enumerate, sample
 from visualize import draw_map
+from math import sqrt
 
 ##################################
 # Phase 2: Unsupervised Learning #
@@ -111,15 +112,25 @@ def find_predictor(user, restaurants, feature_fn):
     restaurants -- A sequence of restaurants
     feature_fn -- A function that takes a restaurant and returns a number
     """
-    reviews_by_user = {review_restaurant_name(review): review_rating(review)
-                       for review in user_reviews(user).values()}
+    reviews_by_user = {review_restaurant_name(review): review_rating(review) for review in user_reviews(user).values()}
 
     xs = [feature_fn(r) for r in restaurants]
     ys = [reviews_by_user[restaurant_name(r)] for r in restaurants]
 
     # BEGIN Question 7
     "*** REPLACE THIS LINE ***"
-    b, a, r_squared = 0, 0, 0  # REPLACE THIS LINE WITH YOUR SOLUTION
+    Sxx,Syy,Sxy=0,0,0
+    for feature_num in xs:
+        Sxx+=(feature_num-mean(xs))**2
+    for review_rating in ys:
+        Syy+=(review_rating-mean(ys))**2
+    for i in range(len(xs)):
+        Sxy+=(xs[i]-mean(xs))(ys[i]-mean(ys))
+    b =Sxy/Sxx
+    a =mean(ys)-b * mean(xs)
+    r_squared = sqrt(Sxy**2/(Sxx*Syy))
+    #b, a, r_squared = 0, 0, 0  # REPLACE THIS LINE WITH YOUR SOLUTION
+
     # END Question 7
 
     def predictor(restaurant):
