@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '082859039c31d47c7289fe580f195935',
+          'answer': 'create a cluster for each centroid consisting of all elements closest to that centroid.',
           'choices': [
             'randomly initialize k centroids',
             r"""
@@ -15,7 +15,7 @@ test = {
             'find the centroid (average position) of each cluster.'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What is the first step of the iterative portion of the
           k-means algorithm?
