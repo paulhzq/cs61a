@@ -119,20 +119,29 @@ def find_predictor(user, restaurants, feature_fn):
 
     # BEGIN Question 7
     "*** REPLACE THIS LINE ***"
+    
     Sxx,Syy,Sxy=0,0,0
-    for feature_num in xs:
-        Sxx+=(feature_num-mean(xs))**2
-    for review_rating in ys:
-        Syy+=(review_rating-mean(ys))**2
-    for i in range(len(xs)):
-        Sxy+=(xs[i]-mean(xs))(ys[i]-mean(ys))
+    for x in xs:
+        Sxx+=(x - mean(xs))**2
+    for y in ys:
+        Syy+=(y - mean(ys))**2
+    for (x,y) in zip(xs,ys):
+        Sxy+=(x - mean(xs))*(y - mean(ys))
     b =Sxy/Sxx
     a =mean(ys)-b * mean(xs)
-    r_squared = sqrt(Sxy**2/(Sxx*Syy))
+    r_squared = Sxy**2/(Sxx * Syy)
+    """ 
+    mean_x=mean(xs)
+    mean_y=mean(ys)
+
+    Sxx=sum([(x - mean_x)**2 for x in xs])
+    Syy=sum([(y - mean_y)**2 for y in ys])
+    Sxy=sum([(x - mean_x)*(y - mean_y) for (x,y) in zip(xs,ys)])
+
+    b, a, r_squared = (Sxy/Sxx), (mean_y - (mean_x*(Sxy/Sxx))), ((Sxy**2) / (Sxx * Syy))
     #b, a, r_squared = 0, 0, 0  # REPLACE THIS LINE WITH YOUR SOLUTION
-
+    """
     # END Question 7
-
     def predictor(restaurant):
         return b * feature_fn(restaurant) + a
 
@@ -151,6 +160,8 @@ def best_predictor(user, restaurants, feature_fns):
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 8
     "*** REPLACE THIS LINE ***"
+    pre =[find_predictor(user,reviewed,feature_fn) for feature_fn in feature_fns]
+    return max(pre,key=lambda x:x[1])[0]
     # END Question 8
 
 
@@ -167,6 +178,17 @@ def rate_all(user, restaurants, feature_fns):
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 9
     "*** REPLACE THIS LINE ***"
+    ratings = {}
+    for restaurant in restaurants:
+        name = restaurant_name(restaurant)
+        if restaurant in reviewed:
+            ratings[name]=user_rating(user,name)
+        else:
+            ratings[name]=predictor(restaurant)
+
+    return ratings
+    
+
     # END Question 9
 
 
@@ -179,6 +201,13 @@ def search(query, restaurants):
     """
     # BEGIN Question 10
     "*** REPLACE THIS LINE ***"
+    sear_restaurant=[]
+    for restaurant in restaurants:
+        if restaurant_categories(restaurant).count(query)>=1:
+            sear_restaurant.append(restaurant)
+
+    return sear_restaurant
+
     # END Question 10
 
 
