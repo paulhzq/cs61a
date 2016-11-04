@@ -1,0 +1,24 @@
+{
+    "name": "Vitamin 6",
+    "endpoint": "cal/cs61a/fa16/vitamin06",
+    "src": [
+        "vitamin06.py"
+    ],
+    "tests": {
+        "vitamin06.py": "doctest"
+    },
+    "default_tests": [
+        "make_counter",
+        "make_fib",
+        "Account",
+        "FreeChecking"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
