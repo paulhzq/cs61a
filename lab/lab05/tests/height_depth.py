@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '74689fcda5421388b764b40ec8de8ccd',
+          'answer': '3',
           'choices': [
             '2',
             '3',
@@ -13,7 +13,7 @@ test = {
             '5'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What is the height of this tree?
                7
@@ -26,7 +26,7 @@ test = {
           """
         },
         {
-          'answer': '31f02e75f8bef5a0621b68131795447b',
+          'answer': '2',
           'choices': [
             '2',
             '3',
@@ -34,7 +34,7 @@ test = {
             '5'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What is the depth of the node containing 3?
                7

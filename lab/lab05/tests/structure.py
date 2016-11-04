@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': 'e7df6bc0dc456d2631ac280dcebe1e2d',
+          'answer': 'tree(1, [tree(2), tree(3, [tree(5)]), tree(4)])',
           'choices': [
             'tree(1, [tree(2), tree(3, [tree(5)]), tree(4)])',
             'tree(1, (tree(2), tree(3, (tree(5))), tree(5)))',
@@ -13,7 +13,7 @@ test = {
             'tree(1, [tree(2), tree(3), tree(4)], tree(5))'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           Which constructor call creates the following tree structure?
               1
@@ -24,7 +24,7 @@ test = {
           """
         },
         {
-          'answer': 'ee4ae32605fa286b61abc4995ff7b5d6',
+          'answer': 'tree(3, [tree(6, [tree(2), tree(1)]), tree(2), tree(7)])',
           'choices': [
             'tree(3, [tree(6, [tree(2), tree(1)]), tree(2), tree(7)])',
             'tree(3, tree(6, [tree(2), tree(1)]), tree(2), tree(7))',
@@ -32,7 +32,7 @@ test = {
             'tree(3, tree(6), [tree(2), tree(1)], [tree(2), tree(7)])'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           Which constructor call creates the following tree structure?
                 3
@@ -43,7 +43,7 @@ test = {
           """
         },
         {
-          'answer': '31f02e75f8bef5a0621b68131795447b',
+          'answer': '2',
           'choices': [
             '2',
             '3',
@@ -51,7 +51,7 @@ test = {
             '7'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           How many branches does the following tree have?
                 7
@@ -64,7 +64,7 @@ test = {
           """
         },
         {
-          'answer': 'a61b0ac4155b8b825711068e31b45943',
+          'answer': '6, 1, 5, 4',
           'choices': [
             '6, 1, 5',
             '6, 1, 5, 4',
@@ -72,7 +72,7 @@ test = {
             'None of the above'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           Given the following tree structure, what are all the leaves?
                 7
