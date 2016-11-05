@@ -19,6 +19,12 @@ def make_counter():
     5
     """
     "*** YOUR CODE HERE ***"
+    li=[]
+    def count_n(s):
+        nonlocal li
+        li=li+[s] 
+        return li.count(s)
+    return count_n
 
 def make_fib():
     """Returns a function that returns the next Fibonacci number
@@ -40,6 +46,13 @@ def make_fib():
     12
     """
     "*** YOUR CODE HERE ***"
+    cur, next = 0,1
+    def fib():
+        nonlocal cur, next
+        result = cur
+        cur,next = next,cur+next
+        return result
+    return fib
 
 class Account:
     """An account has a balance and a holder.
@@ -84,6 +97,11 @@ class Account:
         """Return the number of years until balance would grow to amount."""
         assert self.balance > 0 and amount > 0 and self.interest > 0
         "*** YOUR CODE HERE ***"
+        years,cur_amount=0, self.balance
+        while cur_amount<amount:
+            cur_amount=cur_amount +cur_amount*self.interest
+            years+=1
+        return years
 
 class FreeChecking(Account):
     """A bank account that charges for withdrawals, but the first two are free!
@@ -111,3 +129,12 @@ class FreeChecking(Account):
     free_withdrawals = 2
 
     "*** YOUR CODE HERE ***"
+    def withdraw(self,amount):
+        self.free_withdrawals -= 1
+        if self.free_withdrawals > 0:
+            return Account.withdraw(self, amount)
+        return Account.withdraw(self, amount + self.withdraw_fee)
+
+
+
+
