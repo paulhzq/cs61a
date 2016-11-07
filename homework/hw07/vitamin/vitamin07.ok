@@ -1,0 +1,21 @@
+{
+    "name": "Vitamin 7",
+    "endpoint": "cal/cs61a/fa16/vitamin07",
+    "src": [
+        "vitamin07.py"
+    ],
+    "tests": {
+        "vitamin07.py": "doctest"
+    },
+    "default_tests": [
+        "digits"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
