@@ -30,6 +30,8 @@ class Place(object):
 
     def add_insect(self, insect):
         """Add an INSECT to this Place.
+            
+            
 
         There can be at most one Ant in a Place, unless exactly one of them is
         a BodyguardAnt (Phase 4), in which case there can be two. If add_insect
