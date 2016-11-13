@@ -17,3 +17,12 @@ def vending_machine(snacks):
     'chocolate'
     """
     "*** YOUR CODE HERE ***"
+    i = len(snacks)-1
+    def vender():
+        nonlocal i
+        length =len(snacks)
+        i+=1
+        if(i>=length):
+            i=0
+        return snacks[i]
+    return vender

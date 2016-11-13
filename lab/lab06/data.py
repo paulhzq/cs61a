@@ -96,4 +96,5 @@ fsm.locked = True
 
 # Player:
 # The Player should start at sather_gate.
-me = None
+me = Player('paul',sather_gate)
+
