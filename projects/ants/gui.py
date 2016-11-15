@@ -8,13 +8,13 @@ import os
 import shutil
 import zipfile
 import threading
+import importlib
 from time import sleep
 from ucb import *
 
-VERSION = 1.1
+VERSION = 1.2
 ASSETS_DIR = "assets/"
 INSECT_DIR = "insects/"
-LEAVES_DIR = "leaves/"
 STRATEGY_SECONDS = 3
 INSECT_FILES = {
        'Worker': ASSETS_DIR + INSECT_DIR +  "ant_harvester.gif",
@@ -35,24 +35,17 @@ INSECT_FILES = {
        'Bee': ASSETS_DIR + INSECT_DIR +  "bee.gif",
        'Remover': ASSETS_DIR + INSECT_DIR + "remove.png",
 }
-LEAF_FILES = {
-        'Thrower': ASSETS_DIR + LEAVES_DIR + 'Leaf_Normal.gif',
-        'Short': ASSETS_DIR + LEAVES_DIR + 'Leaf_Normal.gif',
-        'Long': ASSETS_DIR + LEAVES_DIR + 'Leaf_Normal.gif',
-        'Slow': ASSETS_DIR + LEAVES_DIR + 'Leaf_Normal2.gif',
-        'Stun': ASSETS_DIR + LEAVES_DIR + 'Leaf_Normal.gif',
-        'Scuba': ASSETS_DIR + LEAVES_DIR + 'Leaf_Water.gif',
-        'Queen': ASSETS_DIR + LEAVES_DIR + 'Leaf_Normal.gif',
-        'Laser': ASSETS_DIR + LEAVES_DIR + 'Leaf_Normal.gif'
-        }
 
 class GUI:
     """Browser based GUI that communicates with Python game engine"""
 
     def __init__(self):
         self.active = True
-        self.state = state.State()
+        self.cleanState();
+    
+    def cleanState(self):
         self.initialized = False
+        self.state = state.State()
         self.gameOver = False
         self.colony = None
         self.currentBeeId = 0
@@ -64,7 +57,6 @@ class GUI:
         self.insectToId = {}
         self.beeToId = {}
         self.beeLocations = {}
-        self.throwAt = {}
 
     def makeHooks(self):
         ants.Insect.reduce_armor = utils.class_method_wrapper(ants.Insect.reduce_armor, post=dead_insects)
@@ -73,11 +65,15 @@ class GUI:
 
     def newGameThread(self):
         print("Trying to start new game")
+        self.cleanState() # resets GUI state
+        importlib.reload(ants) # resets ants, e.g. with newly implemented Ants
+        self.makeHooks()
+
         self.winner = ants.start_with_strategy(gui.args, gui.strategy)
         self.gameOver = True
         self.saveState("winner", self.winner)
         self.saveState("gameOver", self.gameOver)
-        self.killGUI()
+        # self.killGUI()
         update()
 
     def killGUI(self):
@@ -91,7 +87,6 @@ class GUI:
         self.active = False
 
     def initialize_colony_graphics(self, colony):
-
         self.colony = colony
         self.ant_type_selected = -1
         self.saveState("strategyTime", STRATEGY_SECONDS)
@@ -133,26 +128,11 @@ class GUI:
             self.initialize_colony_graphics(colony)
         elapsed = 0 #Physical time elapsed this turn
         self.saveState("time", int(elapsed))
-        #Clear out our throw at dictionary at the beginning of each turn
-        self.throwAt = {}
         while elapsed < STRATEGY_SECONDS:
             self.saveState("time", colony.time)
             self._update_control_panel(colony)
             sleep(0.25) 
             elapsed += 0.25
-        #Check to see if we need to throw any leaves at the end of the turn
-        self.throwLeaves(colony)
-
-    def throwLeaves(self, colony):
-        has_ant = lambda a: hasattr(a, 'ant') and a.ant
-        for ant in colony.ants + [a.ant for a in colony.ants if has_ant(a)]:
-            if ant.name in LEAF_FILES:
-                bee = ant.nearest_bee(colony.hive)
-                if bee is not None:
-                    self.throwAt[self.insectToId[ant]] = self.beeToId[bee] 
-        self.saveState("throwAt", self.throwAt)
-
-    
 
     def get_place_row(self, name):
         return name.split("_")[1]
@@ -193,8 +173,6 @@ class GUI:
     def update_food(self):
         self.saveState("food", self.colony.food)
 
-
-
     def _update_control_panel(self, colony):
         """Reflect the game state in the play area."""
         self.update_food()
@@ -211,7 +189,19 @@ class GUI:
                     #Add this ant to our internal list of insects
                     self.insects.append(self.insectToId[place.ant])
                 #Ok there is an ant that needs to be drawn here
-                self.places[pRow][pCol]["insects"] = {"id": self.insectToId[place.ant],"type": place.ant.name, "img": self.get_insect_img_file(place.ant.name)}
+                self.places[pRow][pCol]["insects"] = {
+                        "id": self.insectToId[place.ant],
+                        "type": place.ant.name, 
+                        "img": self.get_insect_img_file(place.ant.name)
+                        }
+                # Check if it's a container ant
+                if hasattr(place.ant, "container"):
+                    self.places[pRow][pCol]["insects"]["container"] = place.ant.container
+                    if place.ant.container and place.ant.ant:
+                        self.places[pRow][pCol]["insects"]["contains"] = { 
+                                "type": place.ant.ant.name, 
+                                "img": self.get_insect_img_file(place.ant.ant.name)
+                                }
             else:
                 self.places[pRow][pCol]["insects"] = {}
             #Loop through our bees
@@ -378,7 +368,6 @@ def run(*args):
     PORT = 8000
     global gui
     gui = GUI()
-    gui.makeHooks()
     gui.args = args
     #Basic HTTP Handler
     #Handler = http.server.SimpleHTTPRequestHandler
@@ -394,3 +383,4 @@ def run(*args):
     except Exception:
         print("Unable to automatically open web browser.")
         print("Point your browser to http://localhost:" + str(PORT) + '/gui.html')
+
