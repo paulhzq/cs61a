@@ -23,6 +23,14 @@ class Fib():
 
     def next(self):
         "*** YOUR CODE HERE ***"
+        if self.value == 0:
+            result = Fib()
+            result.value = 1
+        else:
+            result = Fib()
+            result.value = self.value + self.previous
+        result.previous = self.value
+        return result
 
     def __repr__(self):
         return str(self.value)
