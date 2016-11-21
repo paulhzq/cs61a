@@ -69,6 +69,34 @@ class VendingMachine:
     'Here is your soda.'
     """
     "*** YOUR CODE HERE ***"
+    def __init__(self, product, price):
+        self.product = product
+        self.price = price
+        self.stock = 0
+        self.balance = 0
+
+    def restock(self, n):
+        self.stock += n
+        return 'Current {0} stock: {1}'.format(self.product, self.stock)
+
+    def deposit(self, n):
+        if self.stock == 0:
+            return 'Machine is out of stock. Here is your ${0}.'.format(n)
+        self.balance += n
+        return 'Current balance: ${0}'.format(self.balance)
+
+    def vend(self):
+        if self.stock == 0:
+            return 'Machine is out of stock.'
+        difference = self.price - self.balance
+        if difference > 0:
+            return 'You must deposit ${0} more.'.format(difference)
+        message = 'Here is your {0}'.format(self.product)
+        if difference != 0:
+            message += ' and ${0} change'.format(-difference)
+        self.balance = 0
+        self.stock -= 1
+        return message + '.'
 
 class MissManners:
     """A container class that only forward messages that say please.
@@ -109,3 +137,7 @@ class MissManners:
         if not message.startswith(magic_word):
             return 'You must learn to say please first.'
         "*** YOUR CODE HERE ***"
+        attr = message[len(magic_word):]
+        if not hasattr(self.obj, attr):
+            return 'Thanks for asking, but I know not how to ' + attr + '.'
+        return getattr(self.obj, attr)(*args)
