@@ -141,7 +141,7 @@ class Bee(Insect):
         # Phase 3: Special handling for NinjaAnt
         # BEGIN Problem 6A
         "*** REPLACE THIS LINE ***"
-        return self.place.ant is not None
+        return self.place.ant is not None and self.place.ant.blocks_path is True
         # END Problem 6A
 
     def action(self, colony):
@@ -159,6 +159,7 @@ class Bee(Insect):
 class Ant(Insect):
     """An Ant occupies a place and does work for the colony."""
     is_ant = True
+    blocks_path = True
 
     def __init__(self, armor=1):
         """Create an Ant with an ARMOR quantity."""
@@ -207,22 +208,6 @@ class ThrowerAnt(Ant):
             curr_place = curr_place.entrance
             range_counter += 1
         return None
-        # nearest_place = self.place
-        # while nearest_place.bees == []:
-        #     nearest_place = nearest_place.entrance
-        #     self.places_away += 1
-        #     if nearest_place == hive:
-        #         return None
-        #
-        # if self.min_range <= self.places_away <= self.max_range:
-        #
-        #     self.places_away = 0
-        #     return random_or_none(nearest_place.bees)
-        # else:
-        #     self.places_away = 0
-        #     return None
-
-
         # END Problem 3B
 
     def throw_at(self, target):
@@ -302,7 +287,12 @@ class ShortThrower(ThrowerAnt):
 
 
 # BEGIN Problem 5A
-"*** REPLACE THIS LINE ***"
+class WallAnt(Ant):
+    name = 'Wall'
+    food_cost = 4
+    implemented = True
+    def __init__(self, armor=4):
+        Ant.__init__(self, armor)
 # The WallAnt class
 # END Problem 5A
 
@@ -313,18 +303,24 @@ class NinjaAnt(Ant):
     name = 'Ninja'
     damage = 1
     # BEGIN Problem 6A
-    "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    food_cost = 5
+    blocks_path = False
+    implemented = True   # Change to True to view in the GUI
     # END Problem 6A
 
     def action(self, colony):
         # BEGIN Problem 6A
-        "*** REPLACE THIS LINE ***"
+        for bee in self.place.bees[:]:
+            bee.reduce_armor(self.damage)
         # END Problem 6A
 
 
 # BEGIN Problem 5B
-"*** REPLACE THIS LINE ***"
+class ScubaThrower(ThrowerAnt):
+    name = 'Scuba'
+    food_cost = 6
+    implemented = True
+    watersafe = True
 # The ScubaThrower class
 # END Problem 5B
 
@@ -335,23 +331,32 @@ class HungryAnt(Ant):
     """
     name = 'Hungry'
     # BEGIN Problem 6B
-    "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    food_cost = 4
+    time_to_digest = 3
+    implemented = True   # Change to True to view in the GUI
     # END Problem 6B
 
     def __init__(self):
         # BEGIN Problem 6B
         "*** REPLACE THIS LINE ***"
+        self.digesting = 0
+        self.armor = 1
         # END Problem 6B
 
     def eat_bee(self, bee):
         # BEGIN Problem 6B
-        "*** REPLACE THIS LINE ***"
+        bee.reduce_armor(bee.armor)
         # END Problem 6B
 
     def action(self, colony):
         # BEGIN Problem 6B
-        "*** REPLACE THIS LINE ***"
+        if self.digesting ==0:
+            if self.place.bees:
+                self.eat_bee(random.choice(self.place.bees))
+                self.digesting = self.time_to_digest
+        else:
+            self.digesting -=1
+
         # END Problem 6B
 
 
