@@ -25,13 +25,14 @@ class Place(object):
         self.entrance = None  # A Place
         # Phase 1: Add an entrance to the exit
         # BEGIN Problem 2
-        "*** REPLACE THIS LINE ***"
+        if self.exit:
+            self.exit.entrance = self
         # END Problem 2
 
     def add_insect(self, insect):
         """Add an INSECT to this Place.
-            
-            
+
+
 
         There can be at most one Ant in a Place, unless exactly one of them is
         a BodyguardAnt (Phase 4), in which case there can be two. If add_insect
@@ -156,9 +157,6 @@ class Bee(Insect):
 class Ant(Insect):
     """An Ant occupies a place and does work for the colony."""
 
-    is_ant = True
-    implemented = False  # Only implemented Ant classes should be instantiated
-    food_cost = 0
 
     def __init__(self, armor=1):
         """Create an Ant with an ARMOR quantity."""
@@ -170,14 +168,14 @@ class HarvesterAnt(Ant):
 
     name = 'Harvester'
     implemented = True
-
+    food_cost=2
     def action(self, colony):
         """Produce 1 additional food for the COLONY.
 
         colony -- The AntColony, used to access game state information.
         """
         # BEGIN Problem 1
-        "*** REPLACE THIS LINE ***"
+        colony.food += 1
         # END Problem 1
 
 
@@ -187,6 +185,7 @@ class ThrowerAnt(Ant):
     name = 'Thrower'
     implemented = True
     damage = 1
+    food_cost = 3
 
     def nearest_bee(self, hive):
         """Return the nearest Bee in a Place that is not the HIVE, connected to

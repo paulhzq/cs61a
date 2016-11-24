@@ -7,20 +7,18 @@ test = {
         {
           'code': r"""
           >>> HarvesterAnt.food_cost
-          20d533d3e06345c8bd7072212867f2d1
-          # locked
+          2
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
           >>> ThrowerAnt.food_cost
-          81a7d27d1a4a958871bb97b545b871db
-          # locked
+          3
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -28,15 +26,13 @@ test = {
           >>> colony.food = 4
           >>> HarvesterAnt().action(colony)
           >>> colony.food
-          62674984f877ec783f37e8b8b9c264d0
-          # locked
+          5
           >>> HarvesterAnt().action(colony)
           >>> colony.food
-          50ae32be3e31df6c59633df7fdfb3a72
-          # locked
+          6
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,

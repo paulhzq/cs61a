@@ -9,21 +9,17 @@ test = {
           >>> # Simple test for Place
           >>> place0 = Place('place_0')
           >>> print(place0.exit)
-          044ef3c0c6fd739b6260fe6f6cae71dd
-          # locked
+          None
           >>> print(place0.entrance)
-          044ef3c0c6fd739b6260fe6f6cae71dd
-          # locked
+          None
           >>> place1 = Place('place_1', place0)
           >>> place1.exit is place0
-          c7a88a0ffd3aef026b98eef6e7557da3
-          # locked
+          True
           >>> place0.entrance is place1
-          c7a88a0ffd3aef026b98eef6e7557da3
-          # locked
+          True
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
