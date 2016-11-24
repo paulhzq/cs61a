@@ -10,14 +10,12 @@ test = {
           >>> # Testing FireAnt parameters
           >>> fire = FireAnt()
           >>> FireAnt.food_cost
-          62674984f877ec783f37e8b8b9c264d0
-          # locked
+          5
           >>> fire.armor
-          d89cf7c79d5a479b0f636734143ed5e6
-          # locked
+          1
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -28,11 +26,10 @@ test = {
           >>> place.add_insect(FireAnt())
           >>> bee.action(colony) # attack the FireAnt
           >>> bee.armor
-          20d533d3e06345c8bd7072212867f2d1
-          # locked
+          2
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -43,11 +40,10 @@ test = {
           ...     place.add_insect(Bee(3))
           >>> place.bees[0].action(colony)  # Attack the FireAnt
           >>> len(place.bees)               # How many bees are left?
-          73b94a1326ae2e803c3421016112207b
-          # locked
+          0
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -60,11 +56,10 @@ test = {
           >>> place.add_insect(buffAnt)
           >>> bee.action(colony) # attack the FireAnt
           >>> bee.armor  # is damage an instance attribute?
-          0562206f4949c480df34746f6392dbfb
-          # locked
+          400
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
