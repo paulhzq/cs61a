@@ -46,8 +46,14 @@ class Place(object):
             else:
                 # Phase 4: Special handling for BodyguardAnt
                 # BEGIN Problem 7
-                "*** REPLACE THIS LINE ***"
-                assert self.ant is None, 'Two ants in {0}'.format(self)
+                if self.ant.can_contain(insect):
+                    self.ant.ant = insect
+                elif insect.can_contain(self.ant):
+                    insect.ant = self.ant
+                    self.ant = insect
+                else:
+                    assert self.ant is None , 'Two ants in {0}'.format(self)
+                    self.ant = insect
                 # END Problem 7
         else:
             self.bees.append(insect)
@@ -65,6 +71,8 @@ class Place(object):
         """
         if insect.is_ant:
             # Phase 4: Special Handling for BodyguardAnt and QueenAnt
+            if isinstance(insect,QueenAnt) and insect.true_queen:
+                return
             if self.ant is insect:
                 if hasattr(self.ant, 'container') and self.ant.container:
                     self.ant = self.ant.ant
@@ -160,11 +168,16 @@ class Ant(Insect):
     """An Ant occupies a place and does work for the colony."""
     is_ant = True
     blocks_path = True
+    container = False
 
     def __init__(self, armor=1):
         """Create an Ant with an ARMOR quantity."""
         Insect.__init__(self, armor)
-
+    def can_contain(self,other):
+        if self.container and self.ant == None:
+            if other.container == False:
+                return True
+        return False
 
 class HarvesterAnt(Ant):
     """HarvesterAnt produces 1 additional food per turn for the colony."""
@@ -364,8 +377,9 @@ class BodyguardAnt(Ant):
     """BodyguardAnt provides protection to other Ants."""
     name = 'Bodyguard'
     # BEGIN Problem 7
-    "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    food_cost = 4
+    container = True
+    implemented = True  # Change to True to view in the GUI
     # END Problem 7
 
     def __init__(self):
@@ -374,12 +388,14 @@ class BodyguardAnt(Ant):
 
     def contain_ant(self, ant):
         # BEGIN Problem 7
-        "*** REPLACE THIS LINE ***"
+        self.ant = ant
         # END Problem 7
 
     def action(self, colony):
         # BEGIN Problem 7
-        "*** REPLACE THIS LINE ***"
+        if hasattr(self.ant,'action'):
+            self.ant.action(colony)
+
         # END Problem 7
 
 class TankAnt(BodyguardAnt):
@@ -387,27 +403,38 @@ class TankAnt(BodyguardAnt):
     name = 'Tank'
     damage = 1
     # BEGIN Problem 8
-    "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    food_cost = 6
+    container = True
+    implemented = True   # Change to True to view in the GUI
     # END Problem 8
 
     def action(self, colony):
         # BEGIN Problem 8
-        "*** REPLACE THIS LINE ***"
+        for bee in self.place.bees[:]:
+            bee.reduce_armor(self.damage)
+        BodyguardAnt.action(self,colony)
         # END Problem 8
 
-class QueenAnt(Ant):  # You should change this line
+class QueenAnt(ScubaThrower):  # You should change this line
     """The Queen of the colony.  The game is over if a bee enters her place."""
 
     name = 'Queen'
     # BEGIN Problem 9
-    "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    food_cost = 7
+    queen_number = 0
+    buffed = []
+
+    implemented = True  # Change to True to view in the GUI
     # END Problem 9
 
     def __init__(self):
         # BEGIN Problem 9
-        "*** REPLACE THIS LINE ***"
+        ScubaThrower.__init__(self)
+        QueenAnt.queen_number +=1
+        if QueenAnt.queen_number == 1:
+            self.true_queen = True
+        else:
+            self.true_queen = False
         # END Problem 9
 
     def action(self, colony):
@@ -417,7 +444,31 @@ class QueenAnt(Ant):  # You should change this line
         Impostor queens do only one thing: reduce their own armor to 0.
         """
         # BEGIN Problem 9
-        "*** REPLACE THIS LINE ***"
+        if self.true_queen:
+            ThrowerAnt.action(self,colony)
+            pointer = self.place
+            place_lst = []
+            while not pointer ==None:
+                place_lst.append(pointer)
+                pointer = pointer.exit
+
+            ants = []
+            for place in place_lst:
+                if not place.ant == None:
+                    #if place.ant.ant and place.ant.container == True:
+                    if isinstance(place.ant,BodyguardAnt) and place.ant.ant:
+                        ants.append(place.ant.ant)#PLANT.ANT is a BodyguardAnt
+                    ants.append(place.ant)
+
+            for ant in ants:
+                if not isinstance(ant,QueenAnt):
+                    if ant not in QueenAnt.buffed:
+                        ant.damage = ant.damage * 2
+                        QueenAnt.buffed.append(ant)
+        else:
+            self.reduce_armor(self.armor)
+
+
         # END Problem 9
 
     def reduce_armor(self, amount):
@@ -426,6 +477,12 @@ class QueenAnt(Ant):  # You should change this line
         """
         # BEGIN Problem 9
         "*** REPLACE THIS LINE ***"
+        Insect.reduce_armor(self,amount)
+        if self.true_queen and self.armor == 0:
+            bees_win()
+
+
+
         # END Problem 9
 
 class AntRemover(Ant):
