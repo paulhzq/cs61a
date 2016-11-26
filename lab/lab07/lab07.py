@@ -24,7 +24,11 @@ def link_to_list(link):
     >>> link_to_list(Link.empty)
     []
     """
-    "*** YOUR CODE HERE ***"
+    li =[]
+    while not link is Link.empty:
+        li.append(link.first)
+        link = link.rest
+    return li
 
 # Q4
 def remove_all(link , value):
@@ -41,7 +45,21 @@ def remove_all(link , value):
     >>> print_link(l1)
     <0 1>
     """
-    "*** YOUR CODE HERE ***"
+    point = link
+    while point is not Link.empty and point.rest is not Link.empty:
+        if point.rest.first == value:
+            point.rest = point.rest.rest
+        else:
+            point = point.rest
+
+    # if link is Link.empty or link.rest is Link.empty:
+    #     return
+    # if link.rest.first == value:
+    #     link.rest = link.rest.rest
+    #     remove_all(link, value)
+    # else:
+    #     remove_all(link.rest, value)
+
 
 # Linked List Class
 class Link:
