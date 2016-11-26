@@ -467,8 +467,6 @@ class QueenAnt(ScubaThrower):  # You should change this line
                         QueenAnt.buffed.append(ant)
         else:
             self.reduce_armor(self.armor)
-
-
         # END Problem 9
 
     def reduce_armor(self, amount):
@@ -476,20 +474,16 @@ class QueenAnt(ScubaThrower):  # You should change this line
         remaining, signal the end of the game.
         """
         # BEGIN Problem 9
-        "*** REPLACE THIS LINE ***"
         Insect.reduce_armor(self,amount)
         if self.true_queen and self.armor == 0:
             bees_win()
-
-
-
         # END Problem 9
 
 class AntRemover(Ant):
     """Allows the player to remove ants from the board in the GUI."""
 
     name = 'Remover'
-    implemented = False
+    implemented = True
 
     def __init__(self):
         Ant.__init__(self, 0)
@@ -505,7 +499,10 @@ def make_slow(action):
     action -- An action method of some Bee
     """
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    def new_action(colony):
+        if colony.time % 2 == 0:
+            return action(colony)
+    return new_action
     # END Problem EC
 
 def make_stun(action):
@@ -514,13 +511,22 @@ def make_stun(action):
     action -- An action method of some Bee
     """
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    def new_action(colony):
+        return
+    return new_action
     # END Problem EC
 
 def apply_effect(effect, bee, duration):
     """Apply a status effect to a BEE that lasts for DURATION turns."""
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    start_time,origin_action = 0,bee.action
+    def effect_action(colony):
+        nonlocal start_time
+        start_time +=1
+        if start_time <= duration:
+            return effect(origin_action)(colony)
+        return origin_action(colony)
+    bee.action = effect_action
     # END Problem EC
 
 
@@ -529,7 +535,7 @@ class SlowThrower(ThrowerAnt):
 
     name = 'Slow'
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    food_cost = 4
     implemented = False   # Change to True to view in the GUI
     # END Problem EC
 
@@ -543,7 +549,7 @@ class StunThrower(ThrowerAnt):
 
     name = 'Stun'
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    food_cost = 6
     implemented = False   # Change to True to view in the GUI
     # END Problem EC
 
