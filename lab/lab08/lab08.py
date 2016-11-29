@@ -12,6 +12,13 @@ def deep_len(lnk):
     5
     """
     "*** YOUR CODE HERE ***"
+    if lnk == Link.empty:
+        return 0
+    elif type(lnk) is not Link:
+        return 1
+    else:
+        return deep_len(lnk.first) + deep_len(lnk.rest)
+
 
 def make_to_string(front, mid, back, empty_repr):
     """ Returns a function that turns linked lists to strings.
@@ -29,6 +36,12 @@ def make_to_string(front, mid, back, empty_repr):
     '()'
     """
     "*** YOUR CODE HERE ***"
+    def printer(lnk):
+        if lnk == Link.empty:
+            return empty_repr
+        else:
+            return front + str(lnk.first) + mid + printer(lnk.rest) + back
+    return printer
 
 def tree_map(fn, t):
     """Maps the function fn over the entries of tree and returns the
@@ -53,6 +66,11 @@ def tree_map(fn, t):
         256
     """
     "*** YOUR CODE HERE ***"
+    if t.is_leaf():
+        return Tree(fn(t.root), [])
+    map_tree = [tree_map(fn,i) for i in t.branches]
+    return Tree(fn(t.root), mapped_subtrees)
+
 
 def add_trees(t1, t2):
     """
@@ -90,6 +108,18 @@ def add_trees(t1, t2):
       5
     """
     "*** YOUR CODE HERE ***"
+    if not t1:
+        return t2 # Could replace with copy_tree(t2)
+    if not t2:
+        return t1 # Could replace with copy_tree(t1)
+    new_entry = t1.root + t2.root
+    t1_branches, t2_branches = list(t1.branches), list(t2.branches)
+    length_t1, length_t2 = len(t1_branches), len(t2_branches)
+    if length_t1 < length_t2:
+        t1_branches += [None for _ in range(length_t1, length_t2)]
+    elif length_t1 > length_t2:
+        t2_branches += [None for _ in range(length_t2, length_t1)]
+    return Tree(new_entry, [add_trees(branch1, branch2) for branch1, branch2 in zip(t1_branches, t2_branches)])
 
 # Link
 class Link:

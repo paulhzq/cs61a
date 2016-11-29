@@ -28,6 +28,23 @@ def make_advanced_counter_maker():
     1
     """
     "*** YOUR CODE HERE ***"
+    global_count = 0
+    def make_counter():
+        count = 0
+        def counter(msg):
+            nonlocal global_count, count
+            if msg == 'count':
+                count += 1
+                return count
+            elif msg == 'reset':
+                count = 0
+            elif msg == 'global-count':
+                global_count += 1
+                return global_count
+            elif msg == 'global-reset':
+                global_count = 0
+        return counter
+    return make_counter
 
 def trade(first, second):
     """Exchange the smallest prefixes of first and second that have equal sum.
@@ -59,6 +76,12 @@ def trade(first, second):
     m, n = 1, 1
 
     "*** YOUR CODE HERE ***"
+    equal_prefix = lambda: sum(first[:m]) == sum(second[:n])
+    while m < len(first) and n < len(second) and not equal_prefix():
+        if sum(first[:m]) < sum(second[:n]):
+            m += 1
+        else:
+            n += 1
 
     if False: # change this line!
         first[:m], second[:n] = second[:n], first[:m]
