@@ -2,12 +2,12 @@
   (cdr (cdr s)))
 
 (define (cadr s)
-  'YOUR-CODE-HERE
+  (car (cdr s))
   nil
 )
 
 (define (caddr s)
-  'YOUR-CODE-HERE
+  (car (cddr s))
   nil
 )
 
