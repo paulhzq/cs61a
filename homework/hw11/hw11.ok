@@ -1,0 +1,24 @@
+{
+    "name": "Homework 11",
+    "endpoint": "cal/cs61a/fa16/hw11",
+    "src": [
+        "hw11.py"
+    ],
+    "tests": {
+        "hw11.py": "doctest"
+    },
+    "default_tests": [
+        "in_order",
+        "permutations"
+    ],
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "collaborate",
+        "backup",
+        "autostyle"
+    ]
+}
