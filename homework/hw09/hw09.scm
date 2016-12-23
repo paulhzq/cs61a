@@ -3,12 +3,12 @@
 
 (define (cadr s)
   (car (cdr s))
-  nil
+
 )
 
 (define (caddr s)
   (car (cddr s))
-  nil
+  
 )
 
 (define (sign x)
