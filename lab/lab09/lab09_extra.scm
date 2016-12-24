@@ -43,7 +43,9 @@
 (define (max a b) (if (> a b) a b))
 (define (min a b) (if (> a b) b a))
 (define (gcd a b)
-  'YOUR-CODE-HERE
+  (cond ((zero? a) b)
+        ((zero? b) a)
+        (else (gcd (min a b) (modulo (max a b) (min a b)))))
 )
 
 ;;; Tests
@@ -54,15 +56,28 @@
 
 ; Q10
 (define (no-repeats s)
-  'YOUR-CODE-HERE
+  (if (null? s) s
+    (cons (car s)
+      (no-repeats (filter (lambda (x) (not (= (car s) x))) (cdr s)))))
 )
+
+
 
 ; Q11
 (define (substitute s old new)
-  'YOUR-CODE-HERE
+  (cond ((null? s) nil)
+        ((pair? (car s)) (cons (substitute (car s) old new)
+                               (substitute (cdr s) old new)))
+        ((equal? (car s) old) (cons new
+                               (substitute (cdr s) old new)))
+        (else (cons (car s) (substitute (cdr s) old new))))
 )
 
 ; Q12
 (define (sub-all s olds news)
-  'YOUR-CODE-HERE
+  (if (null? olds)
+    s
+    (sub-all (substitute s (car olds) (car news))
+                     (cdr olds)
+                     (cdr news)))
 )
