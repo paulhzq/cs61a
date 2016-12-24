@@ -4,22 +4,30 @@
 (define (square x) (* x x))
 
 (define (pow b n)
-  'YOUR-CODE-HERE
+  (cond 
+  	((eq? n 0) 1)
+  	((even? n)  (square (pow b (/ n 2))) )
+  	(else (* b (pow b (- n 1)))) 
+  )
 )
 
 ; Q6
 (define lst
-  'YOUR-CODE-HERE
+  (list '(1) 2 (cons 3 4) 5 )
 )
 
 ; Q7
 (define (composed f g)
-  'YOUR-CODE-HERE
+  (lambda (x) (f (g x)))
 )
 
 ; Q8
 (define (remove item lst)
-  'YOUR-CODE-HERE
+  (cond
+  	((eq? lst nil) '())
+  	((eq? item (car lst)) (remove item  (cdr lst)) )
+	(else (cons (car lst) (remove item (cdr lst))) ) 
+  )
 )
 
 
