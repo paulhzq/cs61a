@@ -1,5 +1,12 @@
 (define (how-many-dots s)
-  'YOUR-CODE-HERE
+  (if (not (pair? s))
+    0
+    (+ (if (and (not (pair? (cdr s)))
+                (not (null? (cdr s))))
+         1
+         0)
+       (how-many-dots (car s))
+       (how-many-dots (cdr s))))
 )
 
 ;;; Tests

@@ -7,23 +7,18 @@ test = {
         {
           'code': r"""
           scm> (make-sum 1 3)
-          e7bbf92744f33acda0f8f4d93ef2bb79
-          # locked
+          4
           scm> (make-sum 'x 0)
-          5d643de01ee901515c3958fa5a17f9b8
-          # locked
+          x
           scm> (make-sum 0 'x)
-          5d643de01ee901515c3958fa5a17f9b8
-          # locked
+          x
           scm> (make-sum 'a 'x)
-          5a9774332b0568eb8fd085503136dc7a
-          # locked
+          (+ a x)
           scm> (make-sum 'a (make-sum 'x 1))
-          83acb82c8a831c063eaa5ab51f886872
-          # locked
+          (+ a (+ x 1))
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -38,11 +33,10 @@ test = {
         {
           'code': r"""
           scm> (derive '(+ x 3) 'x)
-          edfeeea8163e0f3edfc46b985f61aebc
-          # locked
+          1
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
