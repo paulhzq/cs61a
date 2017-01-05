@@ -1,0 +1,27 @@
+{
+    "name": "Lab 13",
+    "endpoint": "cal/cs61a/fa16/lab13",
+    "src": [
+        "lab13.sql"
+    ],
+    "tests": {
+        "tests/flights.py": "ok_test",
+        "tests/schedule.py": "ok_test",
+        "tests/shopping-cart.py": "ok_test",
+        "tests/meals-part1.py": "ok_test",
+        "tests/meals-part2.py": "ok_test",
+        "tests/meals-part3.py": "ok_test",
+        "tests/cyber-monday-part1.py": "ok_test",
+        "tests/cyber-monday-part2.py": "ok_test",
+        "tests/cyber-monday-part3.py": "ok_test",
+        "tests/cyber-monday-part4.py": "ok_test"
+    },
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
