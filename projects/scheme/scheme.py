@@ -31,7 +31,11 @@ def scheme_eval(expr, env, _=None): # Optional third argument is ignored
         return SPECIAL_FORMS[first](rest, env)
     else:
         # BEGIN PROBLEM 5
-        "*** REPLACE THIS LINE ***"
+        procedure = scheme_eval(first,env)
+        check_procedure(procedure)
+        args = rest.map(lambda operand: scheme_eval(operand, env) )
+        return scheme_apply(procedure, args, env)
+
         # END PROBLEM 5
 
 def self_evaluating(expr):
@@ -72,15 +76,19 @@ class Frame:
     def define(self, symbol, value):
         """Define Scheme SYMBOL to have VALUE."""
         # BEGIN PROBLEM 3
-        "*** REPLACE THIS LINE ***"
+        self.bindings[symbol]=value
+
         # END PROBLEM 3
 
     def lookup(self, symbol):
         """Return the value bound to SYMBOL. Errors if SYMBOL is not found."""
         # BEGIN PROBLEM 3
-        "*** REPLACE THIS LINE ***"
-        # END PROBLEM 3
-        raise SchemeError('unknown identifier: {0}'.format(symbol))
+        if symbol in self.bindings:
+            return self.bindings[symbol]
+        elif self.parent is not None:
+            return self.parent.lookup(symbol)
+        else:
+            raise SchemeError('unknown identifier: {0}'.format(symbol))
 
     def make_child_frame(self, formals, vals):
         """Return a new local frame whose parent is SELF, in which the symbols
@@ -135,7 +143,13 @@ class PrimitiveProcedure(Procedure):
             python_args.append(args.first)
             args = args.second
         # BEGIN PROBLEM 4
-        "*** REPLACE THIS LINE ***"
+        if self.use_env:
+            python_args.append(env)
+        try:
+            return self.fn(*python_args)
+        except TypeError:
+            raise SchemeError('fault function call')
+
         # END PROBLEM 4
 
 class UserDefinedProcedure(Procedure):
@@ -196,7 +210,9 @@ def do_define_form(expressions, env):
     if scheme_symbolp(target):
         check_form(expressions, 2, 2)
         # BEGIN PROBLEM 6
-        "*** REPLACE THIS LINE ***"
+        value = scheme_eval(expressions.second.first,env)
+        env.define(target, value)
+        return target
         # END PROBLEM 6
     elif isinstance(target, Pair) and scheme_symbolp(target.first):
         # BEGIN PROBLEM 10
