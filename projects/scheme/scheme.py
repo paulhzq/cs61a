@@ -48,7 +48,7 @@ def scheme_apply(procedure, args, env):
     check_procedure(procedure)
     return procedure.apply(args, env)
 
-def eval_all(expressions, env):
+def eval_all(expressions, env, tail=False):
     """Evaluate a Scheme list of EXPRESSIONS & return the value of the last."""
     # BEGIN PROBLEM 8
     if expressions is nil:
@@ -212,7 +212,7 @@ def add_primitives(frame, funcs_and_names):
 # initial identifying symbol (if, lambda, quote, ...). Its second argument is
 # the environment in which the form is to be evaluated.
 
-def do_define_form(expressions, env):
+def do_define_form(expressions, env,tail=False):
     """Evaluate a define form."""
     check_form(expressions, 2)
     target = expressions.first
@@ -234,19 +234,19 @@ def do_define_form(expressions, env):
         bad_target = target.first if isinstance(target, Pair) else target
         raise SchemeError('non-symbol: {0}'.format(bad_target))
 
-def do_quote_form(expressions, env):
+def do_quote_form(expressions, env, tail=False):
     """Evaluate a quote form."""
     check_form(expressions, 1, 1)
     # BEGIN PROBLEM 7
     return expressions.first
     # END PROBLEM 7
 
-def do_begin_form(expressions, env):
+def do_begin_form(expressions, env, tail=False):
     """Evaluate begin form."""
     check_form(expressions, 1)
     return eval_all(expressions, env)
 
-def do_lambda_form(expressions, env):
+def do_lambda_form(expressions, env, tail=False):
     """Evaluate a lambda form."""
     check_form(expressions, 2)
     formals = expressions.first
@@ -260,7 +260,7 @@ def do_lambda_form(expressions, env):
     return lambdaProcedure
     # END PROBLEM 9
 
-def do_if_form(expressions, env):
+def do_if_form(expressions, env, tail = False):
     """Evaluate an if form."""
     check_form(expressions, 2, 3)
     if scheme_truep(scheme_eval(expressions.first, env)):
@@ -268,7 +268,7 @@ def do_if_form(expressions, env):
     elif len(expressions) == 3:
         return scheme_eval(expressions.second.second.first, env)
 
-def do_and_form(expressions, env):
+def do_and_form(expressions, env, tail=False):
     """Evaluate a short-circuited and form."""
     # BEGIN PROBLEM 13
     if expressions==nil:
@@ -283,7 +283,7 @@ def do_and_form(expressions, env):
         return scheme_eval(expressions.first,env)
     # END PROBLEM 13
 
-def do_or_form(expressions, env):
+def do_or_form(expressions, env, tail= False):
     """Evaluate a short-circuited or form."""
     # BEGIN PROBLEM 13
     if expressions == nil:
@@ -299,7 +299,7 @@ def do_or_form(expressions, env):
 
     # END PROBLEM 13
 
-def do_cond_form(expressions, env):
+def do_cond_form(expressions, env, tail= False):
     """Evaluate a cond form."""
     while expressions is not nil:
         clause = expressions.first
@@ -319,7 +319,7 @@ def do_cond_form(expressions, env):
             # END PROBLEM 14
         expressions = expressions.second
 
-def do_let_form(expressions, env):
+def do_let_form(expressions, env,tail = False):
     """Evaluate a let form."""
     check_form(expressions, 2)
     let_env = make_let_frame(expressions.first, env)
@@ -431,7 +431,7 @@ class MuProcedure(UserDefinedProcedure):
         return 'MuProcedure({0}, {1})'.format(
             repr(self.formals), repr(self.body))
 
-def do_mu_form(expressions, env):
+def do_mu_form(expressions, env, tail=False):
     """Evaluate a mu form."""
     check_form(expressions, 2)
     formals = expressions.first
@@ -507,7 +507,7 @@ def scheme_optimized_eval(expr, env, tail=False):
 
     if tail:
         # BEGIN Extra Credit
-        "*** REPLACE THIS LINE ***"
+        return Thunk(expr,env)
         # END Extra Credit
     else:
         result = Thunk(expr, env)
@@ -522,7 +522,10 @@ def scheme_optimized_eval(expr, env, tail=False):
             result = SPECIAL_FORMS[first](rest, env)
         else:
             # BEGIN Extra Credit
-            "*** REPLACE THIS LINE ***"
+            operator = complete_eval(scheme_eval(first,env,tail))
+            operands = rest.map(lambda x: complete_eval(scheme_eval(x,env,tail)))
+            result = scheme_apply(operator,operands,env)
+        tail = True #If result is a Thunk expression, it must be an expression in a tail context, in which case 
             # END Extra Credit
     return result
 
