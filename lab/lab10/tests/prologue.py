@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': 'a73208f54c693e08d6671873ec5c680d',
+          'answer': 'Turns input into tokens',
           'choices': [
             'Turns input into tokens',
             'Tries to beat Superman',
@@ -13,11 +13,11 @@ test = {
             'Makes sure that there are no parentheses errors'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does the lexer do?'
         },
         {
-          'answer': '5b1b7da5cb56c4ea1c82e9ef2422b59b',
+          'answer': 'Organizes tokens in a data structure',
           'choices': [
             'Turns input into tokens',
             'Organizes tokens in a data structure',
@@ -25,22 +25,22 @@ test = {
             'Print the result of evaluation'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does the parser do?'
         },
         {
-          'answer': '8006978b69e088213a68a29f96d158db',
+          'answer': 'Read-Eval-Print-Loop',
           'choices': [
             'Read-Eval-Print-Loop',
             'Really-Enormous-Purple-Llamas',
             'Read-Eval-Parse-Lex'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does REPL stand for?'
         },
         {
-          'answer': '65b6edc43cb88f4725318719eada899a',
+          'answer': 'literal, name, call expression, lambda expression',
           'choices': [
             'literal, name, call expression, lambda expression',
             'number, lambda function, primitive function, string',
@@ -48,11 +48,11 @@ test = {
             'name, function, number, literal'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What are all the types of expressions in PyCombinator?'
         },
         {
-          'answer': 'edeb45ad4b7bd1fda9d5ab340c9cd779',
+          'answer': 'number, lambda function, primitive function',
           'choices': [
             'number, lambda function, primitive function',
             'number, string, function',
@@ -60,11 +60,11 @@ test = {
             'number, lambda expression, primitive function'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What are all the types of values in PyCombinator?'
         },
         {
-          'answer': '9487a632d76c000e0cd9acf25dba6527',
+          'answer': 'a Number',
           'choices': [
             'a Number',
             'a String',
@@ -72,11 +72,11 @@ test = {
             'an Expression'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does a Literal evaluate to?'
         },
         {
-          'answer': '72505e10219d03d5c484574d2c172b9a',
+          'answer': 'A lambda function is the result of evaluating a lambda expression',
           'choices': [
             'They are the same thing',
             'A lambda expression is the result of evaluating a lambda function',
@@ -84,11 +84,11 @@ test = {
             'A lambda expression is a call to a lambda function'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What is the difference between a lambda expression and a lambda function?'
         },
         {
-          'answer': '1558e266fcf3c144eade49469854a739',
+          'answer': 'A method of Expr objects that evaluates the Expr and returns a Value',
           'choices': [
             'A method of Expr objects that evaluates the Expr and returns a Value',
             'A method of Expr objects that evaluates a call expression and returns a Number',
@@ -96,11 +96,11 @@ test = {
             'A method of Literal objects that returns a Name'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Which of the following describes the eval method?'
         },
         {
-          'answer': '052a36e24d69e66f6bacbde1c3c38171',
+          'answer': 'As dictionaries that map variable names (strings) to Value objects',
           'choices': [
             'As dictionaries that map variable names (strings) to Value objects',
             'As sequences of Frame objects',
@@ -108,11 +108,11 @@ test = {
             'As linked lists containing dictionaries'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'How are environments represented in our interpreter?'
         },
         {
-          'answer': 'c8719397b67eeba8c4826370e9fcc052',
+          'answer': 'Literal(1)',
           'choices': [
             'Literal(1)',
             'Number(1)',
@@ -120,11 +120,11 @@ test = {
             'Name(1)'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': "What will read('1') output?"
         },
         {
-          'answer': 'fd0cb816ca4bc1c16a1b18d7c9899909',
+          'answer': "Name('x')",
           'choices': [
             'Literal(x)',
             'x',
@@ -132,11 +132,11 @@ test = {
             "Name('x')"
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': "What will read('x') output?"
         },
         {
-          'answer': '9964a5ee1d418d42c046ba51a5d20093',
+          'answer': "CallExpr(Name('add'), [Literal(3), Literal(4)])",
           'choices': [
             "CallExpr(Literal('add'), Literal(3), Literal(4))",
             "CallExpr('add', [Literal(3), Literal(4)])",
@@ -144,7 +144,7 @@ test = {
             "CallExpr(Name('add'), [Literal(3), Literal(4)])"
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': "What will read('add(3, 4)') output?"
         }
       ],
