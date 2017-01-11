@@ -10,7 +10,16 @@ def in_order(t):
     >>> list(in_order(BTree(1)))
     [1]
     """
-    "*** YOUR CODE HERE ***"
+    leaves = []
+    def helper(Bt):
+        if Bt is BTree.empty:
+            return Bt
+        else:
+            leaves.append(Bt.root)
+            helper(Bt.left)
+            helper(Bt.right)
+        return leaves
+    yield from sorted(helper(t))
 
 def permutations(lst):
     """Generates all permutations of sequence LST. Each permutation is a
@@ -30,7 +39,23 @@ def permutations(lst):
     if not lst:
         yield []
         return
-    "*** YOUR CODE HERE ***"
+    def inserter(lst, a):
+        inserted_lst=[]
+        if not lst:
+            return [[a]]
+        for n in range(len(lst)):
+            copy = lst[n]
+            for i in range(len(lst) + 1):
+                c = list(copy)
+                c.insert(i, a)
+                inserted_lst.append(c)
+        return inserted_lst
+    def gene(lst):
+        if not lst:
+            return []
+        else:
+            return inserter(gene(lst[1:]), lst[0])
+    yield from gene(lst)
 
 class Tree:
     def __init__(self, root, branches=[]):
