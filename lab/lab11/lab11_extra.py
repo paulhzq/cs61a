@@ -14,7 +14,10 @@ def scale(s, k):
     >>> [next(m) for _ in range(5)]
     [2, 4, 6, 8, 10]
     """
-    "*** YOUR CODE HERE ***"
+    for i in s:
+        i = i*k
+        yield i
+
 
 # Q9
 def merge(s0, s1):
@@ -32,8 +35,14 @@ def merge(s0, s1):
     """
     i0, i1 = iter(s0), iter(s1)
     e0, e1 = next(i0), next(i1)
-    "*** YOUR CODE HERE ***"
-
+    while True:
+        yield min(e0, e1)
+        if e0 < e1:
+            e0 = next(i0)
+        elif e1 < e0:
+            e1 = next(i1)
+        else:
+            e0, e1 = next(i0), next(i1)
 # Q10
 def remainders_generator(m):
     """
@@ -57,7 +66,24 @@ def remainders_generator(m):
     7
     11
     """
-    "*** YOUR CODE HERE ***"
+    # def remainder_group(rem):
+    #    start = rem
+    #    while True:
+    #        yield start
+    #        start += m
+
+    #for rem in range(m):
+        #yield remainder_group(rem)
+    def remainder_help(n,r):
+        while r<m:
+            yield n
+            n +=1
+            n = n * m +r
+        remainder_help(0,r+1)
+
+    yield remainder_help(0,0)
+
+
 
 # the naturals generator is used for testing scale and merge functions
 def naturals():
@@ -88,4 +114,6 @@ def zip(*iterables):
     [1, 4, 7]
     [2, 5, 8]
     """
-    "*** YOUR CODE HERE ***"
+    iterators = [iter(iterable) for iterable in iterables]
+    while True:
+        yield [next(iterator) for iterator in iterators]
