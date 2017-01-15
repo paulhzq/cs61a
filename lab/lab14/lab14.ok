@@ -1,0 +1,20 @@
+{
+    "name": "Lab 14",
+    "endpoint": "cal/cs61a/fa16/lab14",
+    "src": [
+        "lab14.py"
+    ],
+    "tests": {
+        "lab14.py:question1": "doctest",
+        "lab14.py:question2": "doctest",
+        "lab14.py:question3": "doctest"
+    },
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
